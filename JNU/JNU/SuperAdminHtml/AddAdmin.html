@@ -1,0 +1,140 @@
+﻿
+<section class="content-header">
+    <h1>
+        Manage User Panel
+        <small></small>
+    </h1>
+    <div class="pull-right btnresponsive">
+        <a href="#!/Dashboard/ManageUser" class="btn btn-primary"><i class="fa fa-arrow-left"></i>Back</a>
+    </div>
+</section>
+
+
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Add Admin</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form role="form" id="addadminform" name="adminregistration" novalidate>
+                    <div class="box-body">
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" ng-model="admins.Name" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Enter Name" required>
+                        </div>
+                       
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" ng-model="admins.Nick_name" id="exampleInputPassword1" ng-class="{'submitted': submitted}" placeholder="Nick Name" required>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="email" class="form-control" ng-readonly="readonlyemail" ng-model="admins.Email" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="password" class="form-control" ng-model="admins.Password" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Enter Password" required>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" ng-model="admins.Phone" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Enter Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="admins.WhatsApp_Number" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Enter WhatsApp Number" required>
+                        </div>
+                        <div class="form-group">
+                            <!--<input type="text" class="form-control" ng-model="admins.Whatsapp" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Enter WhatsApp Number" required>-->
+                            <!--<select class="form-control" ng-model="admins.City">
+                                <option value="1">Bhilwara</option>
+                                <option value="2">Jaipur</option>
+                            </select>-->
+                            <select class="form-control" ng-model="admins.City_ID" ng-options="s.name for s in admins.statusTaskList"></select>
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" ng-model="admins.Birthday" ng-class="{'submitted': submitted}" id="datepicker" placeholder="DOB" required>
+                        </div>
+                        <div class="form-group">
+                            
+                            <select class="form-control" ng-model="admins.Gender" ng-options="v.name for v in admins.Genders"></select>
+                        </div>
+                        <div class="form-group">
+                            
+                            <select class="form-control" ng-model="admins.Marital_Status" ng-options="v.name for v in admins.Maritals"></select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="admins.village" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Village" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea  class="form-control" ng-model="admins.Hobbies" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Hobbies" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" ng-model="admins.Profession_Detail" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Profession Detail" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" ng-model="admins.Home_Address" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Home Address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" ng-model="admins.Current_Address" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Current Address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="admins.Facebook_ID" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Facebook ID" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="admins.LinkedIn_ID" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="LinkedIn ID" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="admins.Twitter_ID" ng-class="{'submitted': submitted}" id="exampleInputEmail1" placeholder="Twitter ID" required />
+                        </div>
+                        <div style="position:relative;">
+                            <div class="row">
+                                <div class="col-lg-6" ng-repeat="image in imagesrc">
+                                    <div class="thumbnail">
+                                        <img style="min-height:100px;" src="{{image.Src}}">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="position:absolute;bottom:0;display:block;width:100%; color:#fff;background-color:#333;">
+                                <input id="file" ng-hide="true" type="file" accept="images/*" class="form-control"  ng-files="getTheFiles($files)" />
+
+                            </div>
+                        </div>
+                   
+                    <div class="panel-footer text-center divimage" style="background-color:#337ab7;cursor:pointer;color:#fff;width:15%" onclick="document.getElementById('file').click();">
+                        <span class="h4">Add Profile Pic</span>
+                    </div>
+                        <!--<div class="form-group">
+                            
+                            <input type="file" id="exampleInputFile">
+
+                            
+                        </div>-->
+                        
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                        <button type="submit" ng-click="Submit(adminregistration.$valid)" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            </div></div></section>
+            <style>
+                .content-header {
+                    padding: 15px 15px 0 15px !important;
+                }
+                 input.submitted.ng-invalid,textarea.submitted.ng-invalid {
+        border: 2px solid red !important;
+    }
+
+    input.submitted.ng-valid,textarea.submitted.ng-valid {
+        border: 2px solid green !important;
+    }
+            </style>
+

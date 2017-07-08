@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.125, 11.375" name="JNV">
+  <DataContextMoniker Name="/JNVDataContext" />
+  <nestedChildShapes>
+    <classShape Id="388336db-b845-4e1e-be35-d855284754e3" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/JNVDataContext/tbl_about_us" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e55289b-7d9f-40a9-99e1-eaf055c719a2" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7e64f6c-ca39-42c0-9377-773f4da4c24e" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/JNVDataContext/tbl_video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fe7b002-3f8a-4f94-98d5-2833f003ef62" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c643fcb0-8972-4a16-8cea-ef1f836dd9a0" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/JNVDataContext/tbl_advertisement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="138ddd69-f8cb-4a3b-9136-2e2413467fe1" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="58786f3f-e98a-4a51-94b8-372e16505d14" absoluteBounds="3.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/JNVDataContext/tbl_city_master" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86c13e90-6e17-4305-a37f-f38ff2407715" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="919acffa-ae07-42a0-95e8-f70ff6342282" absoluteBounds="6.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/JNVDataContext/tbl_contact_us" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c15b89b9-5d32-4098-ab5e-03d4a313b1a5" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87fa602b-3172-40fe-a2a1-8179409332cf" absoluteBounds="0.75, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/JNVDataContext/tbl_event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99ab7581-4101-4fd6-bd3e-760c8716484a" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9373719b-39a4-4f47-93a0-aab9d53206ec" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/JNVDataContext/tbl_picture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b88d6aa4-d7db-435b-ba97-3383fb0a29e0" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="186d1e97-1e08-4202-8623-ef0371442f86" absoluteBounds="3.75, 6.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/JNVDataContext/tbl_post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8e2f9ea-5b3e-4f98-a9c4-49e4cbc30a5e" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0618a603-023c-4275-817f-2f5579f9a26d" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/JNVDataContext/tbl_state_master" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81bd334a-de83-4dfc-aade-25b24441d283" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5697db08-5e13-4ceb-83a5-c7244e2109c9" absoluteBounds="6.75, 8.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/JNVDataContext/tbl_teacher" />
+      <nestedChildShapes>
+        <elementListCompartment Id="430f0983-b0ee-402c-bbc9-702a2ef2d990" absoluteBounds="6.765, 9.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91dc1aaa-cb09-4ba4-8a82-ce9fe75b7e94" absoluteBounds="8.875, 3.125, 2, 7.1553369140625">
+      <DataClassMoniker Name="/JNVDataContext/tbl_user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd1c90ea-1993-4594-9a14-35e6383a04ea" absoluteBounds="8.89, 3.585, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

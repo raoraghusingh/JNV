@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html ng-app="JNV">
+<head>
+    <title>JNV</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap 3.3.6 -->
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="http://oitozero.github.io/ngSweetAlert/bower_components/sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+
+    <!-- jQuery 2.2.3 -->
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="AngularJs/Module/JNVModule.js"></script>
+    <script src="AngularJs/Controller/LoginController.js"></script>
+    <script src="AngularJs/Controller/SuperAdminController.js"></script>
+    <script src="AngularJs/Controller/AdminController.js"></script>
+    <script src="dist/js/app.min.js"></script>
+    <script src="AngularJs/Factory/LoginFactory.js"></script>
+    <script src="http://oitozero.github.io/ngSweetAlert/bower_components/sweetalert/lib/sweet-alert.min.js"></script>
+
+    <!-- jQuery UI 1.11.4 -->
+    <!--<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>-->
+    <script src="/AngularJs/Controller/SuperAdminController.js"></script>
+    <script src="AngularJs/Factory/SuperAdminFactory.js"></script>
+    <script src="dist/js/jquery.blockUI.js"></script>
+    
+    
+
+    
+</head>
+<body class="sidebar-mini skin-blue-light">
+    <div id="divmainloader">fdsfsdfsda
+   
+
+        <div class="loader"></div>
+    </div>
+    <div ui-view></div>
+</body>
+</html>
+<script>
+    $('#datepicker').datepicker({
+        autoclose: true
+    });
+</script>
+<style>
+
+      /* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  / .divimage{
+     width:60% !important;
+ }
+  .btnresponsive{
+      margin-top:-35px !important;
+  }
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+ .divimage{
+     width:60% !important;
+ }
+  .btnresponsive{
+      margin-top:-35px !important;
+  }
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+ .divimage{
+     width:60% !important;
+ }
+  .btnresponsive{
+      margin-top:-35px !important;
+  }
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+  .divimage{
+     width:60% !important;
+ }
+   .btnresponsive{
+      margin-top:-35px !important;
+  }
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  /* some CSS here */
+  .divimage{
+     width:60% !important;
+ }
+   .btnresponsive{
+      margin-top:-35px !important;
+  }
+}
+    #divmainloader
+    {
+       width:100%;
+    height:100%;
+    background:#000;
+    position:fixed;
+    top:50; /* slight offeset to allow toggle button to work */
+    left:0;
+    display:none;
+    /* 0.4 = 40% */
+      opacity:0.2;
+      filter:alpha(opacity=80); /* For IE8 and earlier */
+        
+    }
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+</style>

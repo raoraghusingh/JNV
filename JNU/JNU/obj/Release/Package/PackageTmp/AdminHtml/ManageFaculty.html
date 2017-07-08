@@ -1,0 +1,92 @@
+﻿
+<section class="content-header">
+    <h1>
+        Manage Faculty Panel
+        <small></small>
+    </h1>
+    <!--<ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tables</a></li>
+        <li class="active">Data tables</li>
+    </ol>-->
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+           
+            <!-- /.box -->
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Faculty List With Details</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="tblManagerUser" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Faculty Name</th>
+                                <th>Date of Join</th>
+                                <th>Phone Number</th>
+                                <th>Email ID</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Suraj Kumar Ghosi</td>
+                                <td>
+                                    Bhilwara JNV
+                                </td>
+                                <td>9824319758</td>
+                                <td>Surajkumarghosi@gmail.com</td>
+                                <td><a href="javascript:void(0)"> Edit <i class="fa fa-edit"></i></a></td>
+                                <td><a href="javascript:void(0)">Delete <i class="fa fa-remove"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Raghunath sing Rao</td>
+                                <td>
+                                    Ajmer JNV
+                                </td>
+                                <td>9824319758</td>
+                                <td>Rao@gmail.com</td>
+                                <td><a href="javascript:void(0)"> Edit <i class="fa fa-edit"></i></a></td>
+                                <td><a href="javascript:void(0)">Delete <i class="fa fa-remove"></i></a></td>
+                            </tr>
+                          
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Faculty Name</th>
+                                <th>Date of Join</th>
+                                <th>Phone Number</th>
+                                <th>Email ID</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<script>
+    $(function () {
+        
+        $('#tblManagerUser').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true
+        });
+    });
+</script>

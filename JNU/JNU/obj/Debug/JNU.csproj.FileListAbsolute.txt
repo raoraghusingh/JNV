@@ -1,0 +1,226 @@
+F:\Novodiay Project\JNU\JNU\bin\roslyn\csc.exe
+F:\Novodiay Project\JNU\JNU\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Novodiay Project\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Novodiay Project\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Novodiay Project\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Novodiay Project\JNU\JNU\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Novodiay Project\JNU\JNU\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Novodiay Project\JNU\JNU\bin\roslyn\System.Collections.Immutable.dll
+F:\Novodiay Project\JNU\JNU\bin\roslyn\System.Reflection.Metadata.dll
+F:\Novodiay Project\JNU\JNU\bin\roslyn\vbc.exe
+F:\Novodiay Project\JNU\JNU\bin\roslyn\VBCSCompiler.exe
+F:\Novodiay Project\JNU\JNU\bin\roslyn\VBCSCompiler.exe.config
+F:\Novodiay Project\JNU\JNU\bin\JNU.dll.config
+F:\Novodiay Project\JNU\JNU\bin\JNU.dll
+F:\Novodiay Project\JNU\JNU\bin\JNU.pdb
+F:\Novodiay Project\JNU\JNU\bin\Antlr3.Runtime.dll
+F:\Novodiay Project\JNU\JNU\bin\EntityFramework.dll
+F:\Novodiay Project\JNU\JNU\bin\EntityFramework.SqlServer.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Google.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Web.Infrastructure.dll
+F:\Novodiay Project\JNU\JNU\bin\Newtonsoft.Json.dll
+F:\Novodiay Project\JNU\JNU\bin\Owin.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Net.Http.Formatting.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Helpers.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Http.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Http.WebHost.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Mvc.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Optimization.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Razor.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.WebPages.Deployment.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.WebPages.dll
+F:\Novodiay Project\JNU\JNU\bin\System.Web.WebPages.Razor.dll
+F:\Novodiay Project\JNU\JNU\bin\WebGrease.dll
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Helpers.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Mvc.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Optimization.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Razor.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.WebPages.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.WebPages.Deployment.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.WebPages.Razor.xml
+F:\Novodiay Project\JNU\JNU\bin\Antlr3.Runtime.pdb
+F:\Novodiay Project\JNU\JNU\bin\Newtonsoft.Json.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Net.Http.Formatting.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Http.xml
+F:\Novodiay Project\JNU\JNU\bin\System.Web.Http.WebHost.xml
+F:\Novodiay Project\JNU\JNU\bin\EntityFramework.xml
+F:\Novodiay Project\JNU\JNU\bin\EntityFramework.SqlServer.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Google.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Novodiay Project\JNU\JNU\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Novodiay Project\JNU\JNU\obj\Debug\JNU.csprojResolveAssemblyReference.cache
+F:\Novodiay Project\JNU\JNU\obj\Debug\JNU.dll
+F:\Novodiay Project\JNU\JNU\obj\Debug\JNU.pdb
+F:\JNV\JNV\JNU\JNU\bin\roslyn\csc.exe
+F:\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\JNV\JNV\JNU\JNU\bin\roslyn\System.Collections.Immutable.dll
+F:\JNV\JNV\JNU\JNU\bin\roslyn\System.Reflection.Metadata.dll
+F:\JNV\JNV\JNU\JNU\bin\roslyn\vbc.exe
+F:\JNV\JNV\JNU\JNU\bin\roslyn\VBCSCompiler.exe
+F:\JNV\JNV\JNU\JNU\bin\roslyn\VBCSCompiler.exe.config
+F:\JNV\JNV\JNU\JNU\bin\JNU.dll.config
+F:\JNV\JNV\JNU\JNU\bin\JNU.dll
+F:\JNV\JNV\JNU\JNU\bin\JNU.pdb
+F:\JNV\JNV\JNU\JNU\bin\Antlr3.Runtime.dll
+F:\JNV\JNV\JNU\JNU\bin\EntityFramework.dll
+F:\JNV\JNV\JNU\JNU\bin\EntityFramework.SqlServer.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Core.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Cookies.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Facebook.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Google.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.OAuth.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Twitter.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Web.Infrastructure.dll
+F:\JNV\JNV\JNU\JNU\bin\Newtonsoft.Json.dll
+F:\JNV\JNV\JNU\JNU\bin\Owin.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Net.Http.Formatting.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Helpers.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Http.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Http.WebHost.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Mvc.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Optimization.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Razor.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Deployment.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.dll
+F:\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Razor.dll
+F:\JNV\JNV\JNU\JNU\bin\WebGrease.dll
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Helpers.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Mvc.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Optimization.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Razor.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Deployment.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Razor.xml
+F:\JNV\JNV\JNU\JNU\bin\Antlr3.Runtime.pdb
+F:\JNV\JNV\JNU\JNU\bin\Newtonsoft.Json.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Net.Http.Formatting.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Http.xml
+F:\JNV\JNV\JNU\JNU\bin\System.Web.Http.WebHost.xml
+F:\JNV\JNV\JNU\JNU\bin\EntityFramework.xml
+F:\JNV\JNV\JNU\JNU\bin\EntityFramework.SqlServer.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Core.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Facebook.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Cookies.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.OAuth.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Google.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Twitter.xml
+F:\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\JNV\JNV\JNU\JNU\obj\Debug\JNU.csprojResolveAssemblyReference.cache
+F:\JNV\JNV\JNU\JNU\obj\Debug\JNU.dll
+F:\JNV\JNV\JNU\JNU\obj\Debug\JNU.pdb
+F:\ICE Projects\JNV\JNV\JNU\JNU\obj\Debug\JNU.csprojResolveAssemblyReference.cache
+F:\ICE Projects\JNV\JNV\JNU\JNU\obj\Debug\JNU.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\obj\Debug\JNU.pdb
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\csc.exe
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\System.Collections.Immutable.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\System.Reflection.Metadata.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\vbc.exe
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\VBCSCompiler.exe
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\roslyn\VBCSCompiler.exe.config
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\JNU.dll.config
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\JNU.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\JNU.pdb
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Antlr3.Runtime.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\EntityFramework.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\EntityFramework.SqlServer.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\JWT.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Core.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Cookies.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Facebook.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Google.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.OAuth.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Twitter.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Web.Infrastructure.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Newtonsoft.Json.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Owin.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Net.Http.Formatting.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Helpers.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Http.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Http.WebHost.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Mvc.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Optimization.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Razor.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Deployment.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Razor.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\WebGrease.dll
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Helpers.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Mvc.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Optimization.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Razor.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Deployment.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.WebPages.Razor.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Antlr3.Runtime.pdb
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Newtonsoft.Json.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Net.Http.Formatting.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Http.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\System.Web.Http.WebHost.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\EntityFramework.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\EntityFramework.SqlServer.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Core.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Facebook.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Cookies.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.OAuth.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Google.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.Twitter.xml
+F:\ICE Projects\JNV\JNV\JNU\JNU\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
