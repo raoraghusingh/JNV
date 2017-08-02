@@ -12,8 +12,8 @@ namespace JNU.Controllers
     public class LoginController : ApiController
     {
         // GET api/<controller>
-       
-        
+
+
         [HttpPost]
 
         public HttpResponseMessage UserValidate(Login UserDetails)
@@ -24,8 +24,9 @@ namespace JNU.Controllers
             {
                 try
                 {
-                    objUser = db.tbl_users.Where(a => a.Email == UserDetails.Username && a.Password == a.Password).FirstOrDefault();
-                    if(objUser==null)
+
+                    objUser = db.tbl_users.Where(a => a.Email == UserDetails.Username && a.Password == UserDetails.Password).FirstOrDefault();
+                    if (objUser == null)
                     {
                         response = Request.CreateResponse(HttpStatusCode.Forbidden, "UserName Or Password is invalid");
                     }
@@ -33,7 +34,8 @@ namespace JNU.Controllers
                     {
                         response = Request.CreateResponse(HttpStatusCode.OK, objUser);
                     }
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     response = Request.CreateResponse(HttpStatusCode.InternalServerError, ex.StackTrace);
                 }

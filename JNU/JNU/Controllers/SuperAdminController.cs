@@ -49,7 +49,8 @@ namespace JNU.Controllers
                 objadmindetails.Phone = HttpContext.Current.Request.Form["Phone"];
                 objadmindetails.WhatsApp_Number = HttpContext.Current.Request.Form["WhatsApp_Number"];
                 objadmindetails.City_ID = Convert.ToInt32(HttpContext.Current.Request.Form["City_ID"]);
-                objadmindetails.Birthday = Convert.ToDateTime(HttpContext.Current.Request.Form["Birthday"]);
+                objadmindetails.Birthday = Convert.ToString(HttpContext.Current.Request.Form["Birthday"]);
+                //objadmindetails.Birthday = Convert.ToDateTime(HttpContext.Current.Request.Form["Birthday"]);
                 objadmindetails.Gender = HttpContext.Current.Request.Form["Gender"];
                 objadmindetails.Marital_Status = HttpContext.Current.Request.Form["Marital_Status"];
                 objadmindetails.Village = HttpContext.Current.Request.Form["village"];

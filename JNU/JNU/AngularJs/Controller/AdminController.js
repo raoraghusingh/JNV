@@ -2,7 +2,8 @@
     $scope.users = {};
     $scope.login = function () {
       
-        $state.go("AdminDashboard.Home");
+        //$state.go("AdminDashboard.Home");
+        window.location = "#!/AdminDashboard/Home";
     }
 
 }]);

@@ -186,8 +186,15 @@
     <Compile Include="BAL\Common.cs" />
     <Compile Include="BAL\Login.cs" />
     <Compile Include="BAL\Token.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\AdvertisementController.cs" />
+    <Compile Include="Controllers\ContactUsController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SuperAdminController.cs" />
+    <Compile Include="DAL\JNV.cs">
+      <DependentUpon>JNV.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DAL\JNV.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

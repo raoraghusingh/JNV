@@ -115,6 +115,14 @@
       <Column Name="LinkedIn_ID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Twitter_ID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Photo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_Role_tbl_user" Member="tbl_Role" ThisKey="Role" OtherKey="RoleID" Type="tbl_Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Roles" Member="tbl_Roles">
+    <Type Name="tbl_Role">
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="tbl_Role_tbl_user" Member="tbl_users" ThisKey="RoleID" OtherKey="Role" Type="tbl_user" />
     </Type>
   </Table>
   <Function Name="dbo.CheckUserValidate" Method="CheckUserValidate">
@@ -196,10 +204,6 @@
     <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Get_AboutUS_By_CityID" Method="Get_AboutUS_By_CityID" IsComposable="true">
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="object" />
-  </Function>
   <Function Name="dbo.Get_Birthday_By_CityID" Method="Get_Birthday_By_CityID">
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <ElementType Name="Get_Birthday_By_CityIDResult">
@@ -213,10 +217,6 @@
     <ElementType Name="Get_Birthday_By_CurrentDateResult">
       <Column Name="Birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </ElementType>
-  </Function>
-  <Function Name="dbo.Get_ContactUS_By_CityID" Method="Get_ContactUS_By_CityID" IsComposable="true">
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="object" />
   </Function>
   <Function Name="dbo.Get_Events_By_CityID" Method="Get_Events_By_CityID">
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
@@ -308,23 +308,6 @@
   </Function>
   <Function Name="dbo.Set_AboutUs" Method="Set_AboutUs">
     <Parameter Name="About_Us" Parameter="about_Us" Type="System.String" DbType="NVarChar(MAX)" />
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Set_Advertisement" Method="Set_Advertisement">
-    <Parameter Name="advertisement_Name" Type="System.String" DbType="NVarChar(30)" />
-    <Parameter Name="position" Type="System.String" DbType="NVarChar(20)" />
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Set_ContatcUs" Method="Set_ContatcUs">
-    <Parameter Name="Contact_Us" Parameter="contact_Us" Type="System.String" DbType="NVarChar(MAX)" />
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Set_Event" Method="Set_Event">
-    <Parameter Name="Event_Name" Parameter="event_Name" Type="System.String" DbType="NVarChar(30)" />
-    <Parameter Name="Event_Date" Parameter="event_Date" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
@@ -502,5 +485,87 @@
       <Column Name="Twitter_ID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Photo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.Upd_AboutUs_By_CityID" Method="Upd_AboutUs_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="About_Us" Parameter="about_Us" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Get_AboutUS_By_CityID" Method="Get_AboutUS_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_AboutUS_By_CityIDResult">
+      <Column Name="About_Us_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="About_Us" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Set_ContatcUs" Method="Set_ContatcUs">
+    <Parameter Name="Contact_Us" Parameter="contact_Us" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Upd_Contact_By_CityID" Method="Upd_Contact_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Contact_Us" Parameter="contact_Us" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Get_ContactUS_By_CityID" Method="Get_ContactUS_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_ContactUS_By_CityIDResult">
+      <Column Name="Contact_Us_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Us" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_event_By_eventID" Method="Get_event_By_eventID">
+    <Parameter Name="event_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_event_By_eventIDResult">
+      <Column Name="Event_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Event_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Event_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Del_event_By_eventID" Method="Del_event_By_eventID">
+    <Parameter Name="Event_ID" Parameter="event_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Set_Event" Method="Set_Event">
+    <Parameter Name="Event_Name" Parameter="event_Name" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Event_Date" Parameter="event_Date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Upd_Event_By_EventID" Method="Upd_Event_By_EventID">
+    <Parameter Name="Event_ID" Parameter="event_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Event_Name" Parameter="event_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Event_Date" Parameter="event_Date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Get_Advertisement_By_AdvertisementID" Method="Get_Advertisement_By_AdvertisementID">
+    <Parameter Name="Advertisement_ID" Parameter="advertisement_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Advertisement_By_AdvertisementIDResult">
+      <Column Name="Advertisement_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Advertisement_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Del_Advertisement_By_AdvertisementID" Method="Del_Advertisement_By_AdvertisementID">
+    <Parameter Name="Advertisement_ID" Parameter="advertisement_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Set_Advertisement" Method="Set_Advertisement">
+    <Parameter Name="advertisement_Name" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="position" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Upd_Advertisement_By_AdvertisementID" Method="Upd_Advertisement_By_AdvertisementID">
+    <Parameter Name="Advertisement_ID" Parameter="advertisement_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Advertisement_Name" Parameter="advertisement_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Position" Parameter="position" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.String" DbType="NVarChar(20)" />
   </Function>
 </Database>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.125, 11.375" name="JNV">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.875, 13.25" name="JNV">
   <DataContextMoniker Name="/JNVDataContext" />
   <nestedChildShapes>
     <classShape Id="388336db-b845-4e1e-be35-d855284754e3" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
@@ -62,11 +62,24 @@
         <elementListCompartment Id="430f0983-b0ee-402c-bbc9-702a2ef2d990" absoluteBounds="6.765, 9.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="91dc1aaa-cb09-4ba4-8a82-ce9fe75b7e94" absoluteBounds="8.875, 3.125, 2, 7.1553369140625">
+    <classShape Id="875542bc-1cc0-4bae-8220-04ee9c3db280" absoluteBounds="9.5, 5.875, 2, 7.1553369140625">
       <DataClassMoniker Name="/JNVDataContext/tbl_user" />
       <nestedChildShapes>
-        <elementListCompartment Id="fd1c90ea-1993-4594-9a14-35e6383a04ea" absoluteBounds="8.89, 3.585, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0d8f3d33-a10b-4266-a91d-84b7d756eadc" absoluteBounds="9.515, 6.335, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="11851267-f68b-466a-8965-ba40d1609738" absoluteBounds="9.625, 3.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/JNVDataContext/tbl_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b8ea65e-6b5f-4321-9c40-715bbb4cfa78" absoluteBounds="9.64, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.5625 : 5.06899251302083); (10.5625 : 5.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/JNVDataContext/tbl_Role/tbl_Role_tbl_user" />
+      <nodes>
+        <classShapeMoniker Id="11851267-f68b-466a-8965-ba40d1609738" />
+        <classShapeMoniker Id="875542bc-1cc0-4bae-8220-04ee9c3db280" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

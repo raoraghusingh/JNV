@@ -13,6 +13,7 @@
             });
             LoginFactory.LoginUser($scope.users).then(function successCallback(response) {
                 debugger;
+
                 if (response.status == 200) {
                     console.log(response)
                     //$state.go("Dashboard");
