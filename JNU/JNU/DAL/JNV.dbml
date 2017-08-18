@@ -204,20 +204,6 @@
     <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Get_Birthday_By_CityID" Method="Get_Birthday_By_CityID">
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="Get_Birthday_By_CityIDResult">
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Get_Birthday_By_CurrentDate" Method="Get_Birthday_By_CurrentDate">
-    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
-    <ElementType Name="Get_Birthday_By_CurrentDateResult">
-      <Column Name="Birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.Get_Events_By_CityID" Method="Get_Events_By_CityID">
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <ElementType Name="Get_Events_By_CityIDResult">
@@ -278,19 +264,6 @@
       <Column Name="Photo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Get_Teachers_By_CityID" Method="Get_Teachers_By_CityID">
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="Get_Teachers_By_CityIDResult">
-      <Column Name="Teacher_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Teacher_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="School" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Subject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="State_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.Get_Users_For_Notification" Method="Get_Users_For_Notification">
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <ElementType Name="Get_Users_For_NotificationResult">
@@ -322,16 +295,6 @@
     <Parameter Name="Post_Date" Parameter="post_Date" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="User_ID" Parameter="user_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Set_Teacher" Method="Set_Teacher">
-    <Parameter Name="Teacher_Name" Parameter="teacher_Name" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="NVarChar(20)" />
-    <Parameter Name="School" Parameter="school" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="Subject" Parameter="subject" Type="System.String" DbType="NVarChar(30)" />
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="State_ID" Parameter="state_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.Set_Video" Method="Set_Video">
@@ -562,10 +525,77 @@
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.String" DbType="NVarChar(20)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Upd_Advertisement_By_AdvertisementID" Method="Upd_Advertisement_By_AdvertisementID">
+  <Function Name="dbo.Upd_Advertisement_By_AdvertisementID" Method="Upd_Advertisement_By_AdvertisementID" IsComposable="true">
     <Parameter Name="Advertisement_ID" Parameter="advertisement_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="Advertisement_Name" Parameter="advertisement_Name" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="Position" Parameter="position" Type="System.String" DbType="NVarChar(10)" />
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.Get_Birthday_By_CityID" Method="Get_Birthday_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Birthday_By_CityIDResult">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Birthday_By_CurrentDate" Method="Get_Birthday_By_CurrentDate">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="Get_Birthday_By_CurrentDateResult">
+      <Column Name="Birthday" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Del_Teacher_By_TeacherID" Method="Del_Teacher_By_TeacherID">
+    <Parameter Name="Teacher_ID" Parameter="teacher_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Get_Teacher_By_TeacherID" Method="Get_Teacher_By_TeacherID">
+    <Parameter Name="Teacher_ID" Parameter="teacher_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Teacher_By_TeacherIDResult">
+      <Column Name="Teacher_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Teacher_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="School" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Teachers_By_CityID" Method="Get_Teachers_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Teachers_By_CityIDResult">
+      <Column Name="Teacher_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Teacher_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="School" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Set_Teacher" Method="Set_Teacher">
+    <Parameter Name="Teacher_Name" Parameter="teacher_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="School" Parameter="school" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Subject" Parameter="subject" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="State_ID" Parameter="state_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Upd_Teacher_By_TeacherID" Method="Upd_Teacher_By_TeacherID">
+    <Parameter Name="Teacher_ID" Parameter="teacher_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Teacher_Name" Parameter="teacher_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="School" Parameter="school" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Subject" Parameter="subject" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="State_ID" Parameter="state_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

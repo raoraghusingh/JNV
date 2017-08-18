@@ -245,20 +245,6 @@ namespace JNU.DAL
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Birthday_By_CityID")]
-		public ISingleResult<Get_Birthday_By_CityIDResult> Get_Birthday_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
-			return ((ISingleResult<Get_Birthday_By_CityIDResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Birthday_By_CurrentDate")]
-		public ISingleResult<Get_Birthday_By_CurrentDateResult> Get_Birthday_By_CurrentDate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Date", DbType="Date")] System.Nullable<System.DateTime> date)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), date);
-			return ((ISingleResult<Get_Birthday_By_CurrentDateResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Events_By_CityID")]
 		public ISingleResult<Get_Events_By_CityIDResult> Get_Events_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
 		{
@@ -284,13 +270,6 @@ namespace JNU.DAL
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userID);
 			return ((ISingleResult<Get_Profile_By_UserIDResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Teachers_By_CityID")]
-		public ISingleResult<Get_Teachers_By_CityIDResult> Get_Teachers_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
-			return ((ISingleResult<Get_Teachers_By_CityIDResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Users_For_Notification")]
@@ -325,13 +304,6 @@ namespace JNU.DAL
 		public int Set_Post([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Post_Description", DbType="NVarChar(MAX)")] string post_Description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Post_Date", DbType="DateTime")] System.Nullable<System.DateTime> post_Date, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="User_ID", DbType="Int")] System.Nullable<int> user_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), post_Description, post_Date, user_ID, city_ID);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Teacher")]
-		public int Set_Teacher([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_Name", DbType="NVarChar(50)")] string teacher_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="NVarChar(50)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Phone", DbType="NVarChar(20)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="School", DbType="NVarChar(50)")] string school, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Subject", DbType="NVarChar(30)")] string subject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="State_ID", DbType="Int")] System.Nullable<int> state_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), teacher_Name, email, phone, school, subject, city_ID, state_ID);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -519,10 +491,59 @@ namespace JNU.DAL
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Upd_Advertisement_By_AdvertisementID")]
-		public void Upd_Advertisement_By_AdvertisementID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Advertisement_ID", DbType="Int")] System.Nullable<int> advertisement_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Advertisement_Name", DbType="NVarChar(50)")] string advertisement_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Position", DbType="NVarChar(10)")] string position, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="NVarChar(20)")] string city_ID)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Upd_Advertisement_By_AdvertisementID", IsComposable=true)]
+		public object Upd_Advertisement_By_AdvertisementID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Advertisement_ID", DbType="Int")] System.Nullable<int> advertisement_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Advertisement_Name", DbType="NVarChar(50)")] string advertisement_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Position", DbType="NVarChar(10)")] string position, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="NVarChar(20)")] string city_ID)
 		{
-			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), advertisement_ID, advertisement_Name, position, city_ID);
+			return ((object)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), advertisement_ID, advertisement_Name, position, city_ID).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Birthday_By_CityID")]
+		public ISingleResult<Get_Birthday_By_CityIDResult> Get_Birthday_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
+			return ((ISingleResult<Get_Birthday_By_CityIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Birthday_By_CurrentDate")]
+		public ISingleResult<Get_Birthday_By_CurrentDateResult> Get_Birthday_By_CurrentDate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Date", DbType="Date")] System.Nullable<System.DateTime> date)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), date);
+			return ((ISingleResult<Get_Birthday_By_CurrentDateResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Del_Teacher_By_TeacherID")]
+		public int Del_Teacher_By_TeacherID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_ID", DbType="Int")] System.Nullable<int> teacher_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), teacher_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Teacher_By_TeacherID")]
+		public ISingleResult<Get_Teacher_By_TeacherIDResult> Get_Teacher_By_TeacherID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_ID", DbType="Int")] System.Nullable<int> teacher_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), teacher_ID);
+			return ((ISingleResult<Get_Teacher_By_TeacherIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Teachers_By_CityID")]
+		public ISingleResult<Get_Teachers_By_CityIDResult> Get_Teachers_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
+			return ((ISingleResult<Get_Teachers_By_CityIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Teacher")]
+		public int Set_Teacher([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_Name", DbType="NVarChar(50)")] string teacher_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="NVarChar(50)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Phone", DbType="NVarChar(20)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="School", DbType="NVarChar(50)")] string school, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Subject", DbType="NVarChar(30)")] string subject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="State_ID", DbType="Int")] System.Nullable<int> state_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), teacher_Name, email, phone, school, subject, city_ID, state_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Upd_Teacher_By_TeacherID")]
+		public int Upd_Teacher_By_TeacherID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_ID", DbType="Int")] System.Nullable<int> teacher_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_Name", DbType="NVarChar(50)")] string teacher_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="NVarChar(50)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Phone", DbType="NVarChar(20)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="School", DbType="NVarChar(50)")] string school, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Subject", DbType="NVarChar(50)")] string subject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="State_ID", DbType="Int")] System.Nullable<int> state_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), teacher_ID, teacher_Name, email, phone, school, subject, city_ID, state_ID);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -3157,94 +3178,6 @@ namespace JNU.DAL
 		}
 	}
 	
-	public partial class Get_Birthday_By_CityIDResult
-	{
-		
-		private string _Name;
-		
-		private string _Email;
-		
-		private string _Phone;
-		
-		public Get_Birthday_By_CityIDResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this._Email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(50)")]
-		public string Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this._Phone = value;
-				}
-			}
-		}
-	}
-	
-	public partial class Get_Birthday_By_CurrentDateResult
-	{
-		
-		private System.Nullable<System.DateTime> _Birthday;
-		
-		public Get_Birthday_By_CurrentDateResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birthday", DbType="Date")]
-		public System.Nullable<System.DateTime> Birthday
-		{
-			get
-			{
-				return this._Birthday;
-			}
-			set
-			{
-				if ((this._Birthday != value))
-				{
-					this._Birthday = value;
-				}
-			}
-		}
-	}
-	
 	public partial class Get_Events_By_CityIDResult
 	{
 		
@@ -4002,158 +3935,6 @@ namespace JNU.DAL
 				if ((this._Photo != value))
 				{
 					this._Photo = value;
-				}
-			}
-		}
-	}
-	
-	public partial class Get_Teachers_By_CityIDResult
-	{
-		
-		private int _Teacher_ID;
-		
-		private string _Teacher_Name;
-		
-		private string _Email;
-		
-		private string _Phone;
-		
-		private string _School;
-		
-		private string _Subject;
-		
-		private System.Nullable<int> _City_ID;
-		
-		private System.Nullable<int> _State_ID;
-		
-		public Get_Teachers_By_CityIDResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Teacher_ID", DbType="Int NOT NULL")]
-		public int Teacher_ID
-		{
-			get
-			{
-				return this._Teacher_ID;
-			}
-			set
-			{
-				if ((this._Teacher_ID != value))
-				{
-					this._Teacher_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Teacher_Name", DbType="NVarChar(50)")]
-		public string Teacher_Name
-		{
-			get
-			{
-				return this._Teacher_Name;
-			}
-			set
-			{
-				if ((this._Teacher_Name != value))
-				{
-					this._Teacher_Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this._Email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(20)")]
-		public string Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this._Phone = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_School", DbType="NVarChar(50)")]
-		public string School
-		{
-			get
-			{
-				return this._School;
-			}
-			set
-			{
-				if ((this._School != value))
-				{
-					this._School = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subject", DbType="NVarChar(50)")]
-		public string Subject
-		{
-			get
-			{
-				return this._Subject;
-			}
-			set
-			{
-				if ((this._Subject != value))
-				{
-					this._Subject = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
-		public System.Nullable<int> City_ID
-		{
-			get
-			{
-				return this._City_ID;
-			}
-			set
-			{
-				if ((this._City_ID != value))
-				{
-					this._City_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_State_ID", DbType="Int")]
-		public System.Nullable<int> State_ID
-		{
-			get
-			{
-				return this._State_ID;
-			}
-			set
-			{
-				if ((this._State_ID != value))
-				{
-					this._State_ID = value;
 				}
 			}
 		}
@@ -5748,6 +5529,416 @@ namespace JNU.DAL
 				if ((this._City_ID != value))
 				{
 					this._City_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Birthday_By_CityIDResult
+	{
+		
+		private string _Name;
+		
+		private string _Email;
+		
+		private string _Phone;
+		
+		private string _Birthday;
+		
+		public Get_Birthday_By_CityIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(50)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this._Phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birthday", DbType="NVarChar(50)")]
+		public string Birthday
+		{
+			get
+			{
+				return this._Birthday;
+			}
+			set
+			{
+				if ((this._Birthday != value))
+				{
+					this._Birthday = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Birthday_By_CurrentDateResult
+	{
+		
+		private string _Birthday;
+		
+		public Get_Birthday_By_CurrentDateResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birthday", DbType="NVarChar(50)")]
+		public string Birthday
+		{
+			get
+			{
+				return this._Birthday;
+			}
+			set
+			{
+				if ((this._Birthday != value))
+				{
+					this._Birthday = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Teacher_By_TeacherIDResult
+	{
+		
+		private int _Teacher_ID;
+		
+		private string _Teacher_Name;
+		
+		private string _Email;
+		
+		private string _Phone;
+		
+		private string _School;
+		
+		private string _Subject;
+		
+		private System.Nullable<int> _City_ID;
+		
+		private System.Nullable<int> _State_ID;
+		
+		public Get_Teacher_By_TeacherIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Teacher_ID", DbType="Int NOT NULL")]
+		public int Teacher_ID
+		{
+			get
+			{
+				return this._Teacher_ID;
+			}
+			set
+			{
+				if ((this._Teacher_ID != value))
+				{
+					this._Teacher_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Teacher_Name", DbType="NVarChar(50)")]
+		public string Teacher_Name
+		{
+			get
+			{
+				return this._Teacher_Name;
+			}
+			set
+			{
+				if ((this._Teacher_Name != value))
+				{
+					this._Teacher_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(20)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this._Phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_School", DbType="NVarChar(50)")]
+		public string School
+		{
+			get
+			{
+				return this._School;
+			}
+			set
+			{
+				if ((this._School != value))
+				{
+					this._School = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subject", DbType="NVarChar(50)")]
+		public string Subject
+		{
+			get
+			{
+				return this._Subject;
+			}
+			set
+			{
+				if ((this._Subject != value))
+				{
+					this._Subject = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_State_ID", DbType="Int")]
+		public System.Nullable<int> State_ID
+		{
+			get
+			{
+				return this._State_ID;
+			}
+			set
+			{
+				if ((this._State_ID != value))
+				{
+					this._State_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Teachers_By_CityIDResult
+	{
+		
+		private int _Teacher_ID;
+		
+		private string _Teacher_Name;
+		
+		private string _Email;
+		
+		private string _Phone;
+		
+		private string _School;
+		
+		private string _Subject;
+		
+		private System.Nullable<int> _City_ID;
+		
+		private System.Nullable<int> _State_ID;
+		
+		public Get_Teachers_By_CityIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Teacher_ID", DbType="Int NOT NULL")]
+		public int Teacher_ID
+		{
+			get
+			{
+				return this._Teacher_ID;
+			}
+			set
+			{
+				if ((this._Teacher_ID != value))
+				{
+					this._Teacher_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Teacher_Name", DbType="NVarChar(50)")]
+		public string Teacher_Name
+		{
+			get
+			{
+				return this._Teacher_Name;
+			}
+			set
+			{
+				if ((this._Teacher_Name != value))
+				{
+					this._Teacher_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(20)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this._Phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_School", DbType="NVarChar(50)")]
+		public string School
+		{
+			get
+			{
+				return this._School;
+			}
+			set
+			{
+				if ((this._School != value))
+				{
+					this._School = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subject", DbType="NVarChar(50)")]
+		public string Subject
+		{
+			get
+			{
+				return this._Subject;
+			}
+			set
+			{
+				if ((this._Subject != value))
+				{
+					this._Subject = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_State_ID", DbType="Int")]
+		public System.Nullable<int> State_ID
+		{
+			get
+			{
+				return this._State_ID;
+			}
+			set
+			{
+				if ((this._State_ID != value))
+				{
+					this._State_ID = value;
 				}
 			}
 		}

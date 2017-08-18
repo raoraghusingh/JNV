@@ -188,10 +188,14 @@
     <Compile Include="BAL\Token.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\AdvertisementController.cs" />
+    <Compile Include="Controllers\BirthdayController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\FacultyController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SuperAdminController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="DAL\JNV.cs">
       <DependentUpon>JNV.dbml</DependentUpon>
     </Compile>
