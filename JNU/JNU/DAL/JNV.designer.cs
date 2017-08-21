@@ -252,13 +252,6 @@ namespace JNU.DAL
 			return ((ISingleResult<Get_Events_By_CityIDResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Pictures_By_CityID")]
-		public ISingleResult<Get_Pictures_By_CityIDResult> Get_Pictures_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
-			return ((ISingleResult<Get_Pictures_By_CityIDResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Post_By_CityID", IsComposable=true)]
 		public object Get_Post_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
 		{
@@ -279,13 +272,6 @@ namespace JNU.DAL
 			return ((ISingleResult<Get_Users_For_NotificationResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Videos_By_CityID")]
-		public ISingleResult<Get_Videos_By_CityIDResult> Get_Videos_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
-			return ((ISingleResult<Get_Videos_By_CityIDResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_AboutUs")]
 		public int Set_AboutUs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="About_Us", DbType="NVarChar(MAX)")] string about_Us, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
 		{
@@ -293,24 +279,10 @@ namespace JNU.DAL
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Picture")]
-		public int Set_Picture([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Picture_Name", DbType="NVarChar(50)")] string picture_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="NVarChar(50)")] string album_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), picture_Name, album_Name, city_ID);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Post")]
 		public int Set_Post([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Post_Description", DbType="NVarChar(MAX)")] string post_Description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Post_Date", DbType="DateTime")] System.Nullable<System.DateTime> post_Date, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="User_ID", DbType="Int")] System.Nullable<int> user_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), post_Description, post_Date, user_ID, city_ID);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Video")]
-		public int Set_Video([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Video_Name", DbType="NVarChar(50)")] string video_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="NVarChar(50)")] string album_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), video_Name, album_Name, city_ID);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -543,6 +515,76 @@ namespace JNU.DAL
 		public int Upd_Teacher_By_TeacherID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_ID", DbType="Int")] System.Nullable<int> teacher_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Teacher_Name", DbType="NVarChar(50)")] string teacher_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="NVarChar(50)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Phone", DbType="NVarChar(20)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="School", DbType="NVarChar(50)")] string school, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Subject", DbType="NVarChar(50)")] string subject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="State_ID", DbType="Int")] System.Nullable<int> state_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), teacher_ID, teacher_Name, email, phone, school, subject, city_ID, state_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Del_Picture_By_PictureID")]
+		public int Del_Picture_By_PictureID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Picture_ID", DbType="Int")] System.Nullable<int> picture_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), picture_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Del_Pictures_By_AlbumName")]
+		public int Del_Pictures_By_AlbumName([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="Int")] System.Nullable<int> album_Name)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), album_Name);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Pictures_By_AlbumName")]
+		public ISingleResult<Get_Pictures_By_AlbumNameResult> Get_Pictures_By_AlbumName([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="Int")] System.Nullable<int> album_Name)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), album_Name);
+			return ((ISingleResult<Get_Pictures_By_AlbumNameResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Pictures_By_CityID")]
+		public ISingleResult<Get_Pictures_By_CityIDResult> Get_Pictures_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
+			return ((ISingleResult<Get_Pictures_By_CityIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Picture")]
+		public int Set_Picture([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Picture_Name", DbType="NVarChar(50)")] string picture_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="NVarChar(50)")] string album_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), picture_Name, album_Name, city_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Del_Video_By_VideoID")]
+		public int Del_Video_By_VideoID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Video_ID", DbType="Int")] System.Nullable<int> video_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), video_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Del_Videos_By_AlbumName")]
+		public int Del_Videos_By_AlbumName([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="Int")] System.Nullable<int> album_Name)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), album_Name);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Videos_By_AlbumName")]
+		public ISingleResult<Get_Videos_By_AlbumNameResult> Get_Videos_By_AlbumName([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="Int")] System.Nullable<int> album_Name)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), album_Name);
+			return ((ISingleResult<Get_Videos_By_AlbumNameResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Videos_By_CityID")]
+		public ISingleResult<Get_Videos_By_CityIDResult> Get_Videos_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
+			return ((ISingleResult<Get_Videos_By_CityIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Video")]
+		public int Set_Video([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Video_Name", DbType="NVarChar(50)")] string video_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="NVarChar(50)")] string album_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), video_Name, album_Name, city_ID);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -3258,86 +3300,6 @@ namespace JNU.DAL
 		}
 	}
 	
-	public partial class Get_Pictures_By_CityIDResult
-	{
-		
-		private int _Picture_ID;
-		
-		private string _Picture_Name;
-		
-		private string _Album_Name;
-		
-		private System.Nullable<int> _City_ID;
-		
-		public Get_Pictures_By_CityIDResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_ID", DbType="Int NOT NULL")]
-		public int Picture_ID
-		{
-			get
-			{
-				return this._Picture_ID;
-			}
-			set
-			{
-				if ((this._Picture_ID != value))
-				{
-					this._Picture_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_Name", DbType="NVarChar(50)")]
-		public string Picture_Name
-		{
-			get
-			{
-				return this._Picture_Name;
-			}
-			set
-			{
-				if ((this._Picture_Name != value))
-				{
-					this._Picture_Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
-		public string Album_Name
-		{
-			get
-			{
-				return this._Album_Name;
-			}
-			set
-			{
-				if ((this._Album_Name != value))
-				{
-					this._Album_Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
-		public System.Nullable<int> City_ID
-		{
-			get
-			{
-				return this._City_ID;
-			}
-			set
-			{
-				if ((this._City_ID != value))
-				{
-					this._City_ID = value;
-				}
-			}
-		}
-	}
-	
 	public partial class Get_Profile_By_UserIDResult
 	{
 		
@@ -3961,86 +3923,6 @@ namespace JNU.DAL
 				if ((this._Email != value))
 				{
 					this._Email = value;
-				}
-			}
-		}
-	}
-	
-	public partial class Get_Videos_By_CityIDResult
-	{
-		
-		private int _Video_ID;
-		
-		private string _Video_Name;
-		
-		private string _Album_Name;
-		
-		private System.Nullable<int> _City_ID;
-		
-		public Get_Videos_By_CityIDResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_ID", DbType="Int NOT NULL")]
-		public int Video_ID
-		{
-			get
-			{
-				return this._Video_ID;
-			}
-			set
-			{
-				if ((this._Video_ID != value))
-				{
-					this._Video_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_Name", DbType="NVarChar(50)")]
-		public string Video_Name
-		{
-			get
-			{
-				return this._Video_Name;
-			}
-			set
-			{
-				if ((this._Video_Name != value))
-				{
-					this._Video_Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
-		public string Album_Name
-		{
-			get
-			{
-				return this._Album_Name;
-			}
-			set
-			{
-				if ((this._Album_Name != value))
-				{
-					this._Album_Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
-		public System.Nullable<int> City_ID
-		{
-			get
-			{
-				return this._City_ID;
-			}
-			set
-			{
-				if ((this._City_ID != value))
-				{
-					this._City_ID = value;
 				}
 			}
 		}
@@ -5939,6 +5821,326 @@ namespace JNU.DAL
 				if ((this._State_ID != value))
 				{
 					this._State_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Pictures_By_AlbumNameResult
+	{
+		
+		private int _Picture_ID;
+		
+		private string _Picture_Name;
+		
+		private string _Album_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		public Get_Pictures_By_AlbumNameResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_ID", DbType="Int NOT NULL")]
+		public int Picture_ID
+		{
+			get
+			{
+				return this._Picture_ID;
+			}
+			set
+			{
+				if ((this._Picture_ID != value))
+				{
+					this._Picture_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_Name", DbType="NVarChar(50)")]
+		public string Picture_Name
+		{
+			get
+			{
+				return this._Picture_Name;
+			}
+			set
+			{
+				if ((this._Picture_Name != value))
+				{
+					this._Picture_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
+		public string Album_Name
+		{
+			get
+			{
+				return this._Album_Name;
+			}
+			set
+			{
+				if ((this._Album_Name != value))
+				{
+					this._Album_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Pictures_By_CityIDResult
+	{
+		
+		private int _Picture_ID;
+		
+		private string _Picture_Name;
+		
+		private string _Album_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		public Get_Pictures_By_CityIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_ID", DbType="Int NOT NULL")]
+		public int Picture_ID
+		{
+			get
+			{
+				return this._Picture_ID;
+			}
+			set
+			{
+				if ((this._Picture_ID != value))
+				{
+					this._Picture_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_Name", DbType="NVarChar(50)")]
+		public string Picture_Name
+		{
+			get
+			{
+				return this._Picture_Name;
+			}
+			set
+			{
+				if ((this._Picture_Name != value))
+				{
+					this._Picture_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
+		public string Album_Name
+		{
+			get
+			{
+				return this._Album_Name;
+			}
+			set
+			{
+				if ((this._Album_Name != value))
+				{
+					this._Album_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Videos_By_AlbumNameResult
+	{
+		
+		private int _Video_ID;
+		
+		private string _Video_Name;
+		
+		private string _Album_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		public Get_Videos_By_AlbumNameResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_ID", DbType="Int NOT NULL")]
+		public int Video_ID
+		{
+			get
+			{
+				return this._Video_ID;
+			}
+			set
+			{
+				if ((this._Video_ID != value))
+				{
+					this._Video_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_Name", DbType="NVarChar(50)")]
+		public string Video_Name
+		{
+			get
+			{
+				return this._Video_Name;
+			}
+			set
+			{
+				if ((this._Video_Name != value))
+				{
+					this._Video_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
+		public string Album_Name
+		{
+			get
+			{
+				return this._Album_Name;
+			}
+			set
+			{
+				if ((this._Album_Name != value))
+				{
+					this._Album_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Videos_By_CityIDResult
+	{
+		
+		private int _Video_ID;
+		
+		private string _Video_Name;
+		
+		private string _Album_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		public Get_Videos_By_CityIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_ID", DbType="Int NOT NULL")]
+		public int Video_ID
+		{
+			get
+			{
+				return this._Video_ID;
+			}
+			set
+			{
+				if ((this._Video_ID != value))
+				{
+					this._Video_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_Name", DbType="NVarChar(50)")]
+		public string Video_Name
+		{
+			get
+			{
+				return this._Video_Name;
+			}
+			set
+			{
+				if ((this._Video_Name != value))
+				{
+					this._Video_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
+		public string Album_Name
+		{
+			get
+			{
+				return this._Album_Name;
+			}
+			set
+			{
+				if ((this._Album_Name != value))
+				{
+					this._Album_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
 				}
 			}
 		}

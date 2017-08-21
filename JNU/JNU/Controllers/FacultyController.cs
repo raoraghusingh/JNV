@@ -81,7 +81,7 @@ namespace JNU.Controllers
         /// <param name="FacultyID"></param>
         /// <returns></returns>
         [HttpGet]
-        public HttpResponseMessage DeleteEvent(int FacultyID)
+        public HttpResponseMessage DeleteFaculty(int FacultyID)
         {
             using (var db = new JNVDataContext())
             {

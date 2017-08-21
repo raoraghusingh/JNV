@@ -213,15 +213,6 @@
       <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Get_Pictures_By_CityID" Method="Get_Pictures_By_CityID">
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="Get_Pictures_By_CityIDResult">
-      <Column Name="Picture_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Picture_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.Get_Post_By_CityID" Method="Get_Post_By_CityID" IsComposable="true">
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <Return Type="object" />
@@ -270,23 +261,8 @@
       <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Get_Videos_By_CityID" Method="Get_Videos_By_CityID">
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="Get_Videos_By_CityIDResult">
-      <Column Name="Video_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Video_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.Set_AboutUs" Method="Set_AboutUs">
     <Parameter Name="About_Us" Parameter="about_Us" Type="System.String" DbType="NVarChar(MAX)" />
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Set_Picture" Method="Set_Picture">
-    <Parameter Name="Picture_Name" Parameter="picture_Name" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
@@ -294,12 +270,6 @@
     <Parameter Name="Post_Description" Parameter="post_Description" Type="System.String" DbType="NVarChar(MAX)" />
     <Parameter Name="Post_Date" Parameter="post_Date" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="User_ID" Parameter="user_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Set_Video" Method="Set_Video">
-    <Parameter Name="Video_Name" Parameter="video_Name" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
@@ -596,6 +566,70 @@
     <Parameter Name="Subject" Parameter="subject" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="State_ID" Parameter="state_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Del_Picture_By_PictureID" Method="Del_Picture_By_PictureID">
+    <Parameter Name="Picture_ID" Parameter="picture_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Del_Pictures_By_AlbumName" Method="Del_Pictures_By_AlbumName">
+    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Get_Pictures_By_AlbumName" Method="Get_Pictures_By_AlbumName">
+    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Pictures_By_AlbumNameResult">
+      <Column Name="Picture_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Picture_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Pictures_By_CityID" Method="Get_Pictures_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Pictures_By_CityIDResult">
+      <Column Name="Picture_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Picture_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Set_Picture" Method="Set_Picture">
+    <Parameter Name="Picture_Name" Parameter="picture_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Del_Video_By_VideoID" Method="Del_Video_By_VideoID">
+    <Parameter Name="Video_ID" Parameter="video_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Del_Videos_By_AlbumName" Method="Del_Videos_By_AlbumName">
+    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Get_Videos_By_AlbumName" Method="Get_Videos_By_AlbumName">
+    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Videos_By_AlbumNameResult">
+      <Column Name="Video_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Video_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Videos_By_CityID" Method="Get_Videos_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Videos_By_CityIDResult">
+      <Column Name="Video_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Video_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Set_Video" Method="Set_Video">
+    <Parameter Name="Video_Name" Parameter="video_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
 </Database>
