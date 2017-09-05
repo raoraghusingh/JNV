@@ -28,8 +28,8 @@ namespace JNU.Controllers
             try
             {
                 tbl_contact_us objContactUsDetails = new tbl_contact_us();
-                objContactUsDetails.Contact_Us_ID = Convert.ToInt32(HttpContext.Current.Request.Form["ContactUsID"]);
-                objContactUsDetails.Contact_Us = Convert.ToString(HttpContext.Current.Request.Form["ContactUs"]);
+                objContactUsDetails.Contact_Us_ID = Convert.ToInt32(HttpContext.Current.Request.Form["Contact_Us_ID"]);
+                objContactUsDetails.Contact_Us = Convert.ToString(HttpContext.Current.Request.Form["Contact_Us"]);
                 objContactUsDetails.City_ID = Convert.ToInt32(HttpContext.Current.Request.Form["CityID"]);
 
                 if (objContactUsDetails.Contact_Us_ID == 0)

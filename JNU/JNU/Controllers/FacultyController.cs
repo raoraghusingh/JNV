@@ -24,7 +24,7 @@ namespace JNU.Controllers
         /// <param name="CityID"></param>
         /// <returns></returns>
         [HttpGet]
-        public HttpResponseMessage GetTeacherByCityID(int CityID)
+        public HttpResponseMessage GetFacultiesByCityID(int CityID)
         {
             try
             {
@@ -52,13 +52,13 @@ namespace JNU.Controllers
         /// <param name="TeacherID"></param>
         /// <returns></returns>
         [HttpGet]
-        public HttpResponseMessage GetTeacherByTeacherID(int TeacherID)
+        public HttpResponseMessage GetFacultyByID(int FacultyID)
         {
             try
             {
                 using (var db = new JNVDataContext())
                 {
-                    List<Get_Teacher_By_TeacherIDResult> TeacherDetails = db.Get_Teacher_By_TeacherID(TeacherID).ToList();
+                    List<Get_Teacher_By_TeacherIDResult> TeacherDetails = db.Get_Teacher_By_TeacherID(FacultyID).ToList();
                     return new HttpResponseMessage()
                     {
                         Content = new StringContent(JArray.FromObject(TeacherDetails).ToString(), Encoding.UTF8, "application/json")
@@ -73,7 +73,7 @@ namespace JNU.Controllers
                 };
             }
         }
-        
+
 
         /// <summary>
         /// Delete Faculty by FacultyID
@@ -99,11 +99,12 @@ namespace JNU.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage Faculty()
+        public HttpResponseMessage AddUpdateFaculty()
         {
             try
             {
                 tbl_teacher objTeacherDetails = new tbl_teacher();
+                objTeacherDetails.Teacher_ID = Convert.ToInt32(HttpContext.Current.Request.Form["Teacher_ID"]);
                 objTeacherDetails.Teacher_Name = Convert.ToString(HttpContext.Current.Request.Form["Teacher_Name"]);
                 objTeacherDetails.Email = Convert.ToString(HttpContext.Current.Request.Form["Email"]);
                 objTeacherDetails.Phone = Convert.ToString(HttpContext.Current.Request.Form["Phone"]);
@@ -115,7 +116,7 @@ namespace JNU.Controllers
 
                 using (var db = new JNVDataContext())
                 {
-                    if (objTeacherDetails.City_ID > 0)
+                    if (objTeacherDetails.Teacher_ID > 0)
                     {
                         db.Upd_Teacher_By_TeacherID(objTeacherDetails.Teacher_ID, objTeacherDetails.Teacher_Name, objTeacherDetails.Email, objTeacherDetails.Phone, objTeacherDetails.School, objTeacherDetails.Subject, objTeacherDetails.City_ID, objTeacherDetails.State_ID);
                     }
@@ -140,6 +141,6 @@ namespace JNU.Controllers
                 };
             }
         }
-        
+
     }
 }

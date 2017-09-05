@@ -1,84 +1,111 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.875, 13.25" name="JNV">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 14.25" name="JNV">
   <DataContextMoniker Name="/JNVDataContext" />
   <nestedChildShapes>
-    <classShape Id="388336db-b845-4e1e-be35-d855284754e3" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+    <classShape Id="11ec5033-3f31-4ef9-8ef1-bc6562f63eb6" absoluteBounds="9, 5.625, 2.125, 1.3862939453125005">
       <DataClassMoniker Name="/JNVDataContext/tbl_about_us" />
       <nestedChildShapes>
-        <elementListCompartment Id="1e55289b-7d9f-40a9-99e1-eaf055c719a2" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6411a44e-bd8d-4f75-a47d-fba7832abfd5" absoluteBounds="9.015, 6.085, 2.0949999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="b7e64f6c-ca39-42c0-9377-773f4da4c24e" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
-      <DataClassMoniker Name="/JNVDataContext/tbl_video" />
-      <nestedChildShapes>
-        <elementListCompartment Id="5fe7b002-3f8a-4f94-98d5-2833f003ef62" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="c643fcb0-8972-4a16-8cea-ef1f836dd9a0" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+    <classShape Id="c7e2f70d-ebd4-4c4c-92f3-3baeb6ea75da" absoluteBounds="11, 0.625, 2.125, 1.5785953776041666">
       <DataClassMoniker Name="/JNVDataContext/tbl_advertisement" />
       <nestedChildShapes>
-        <elementListCompartment Id="138ddd69-f8cb-4a3b-9136-2e2413467fe1" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="92fec92a-fc09-4f6e-9e65-25ce729f5f0f" absoluteBounds="11.015, 1.085, 2.0949999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="58786f3f-e98a-4a51-94b8-372e16505d14" absoluteBounds="3.75, 3.75, 2, 1.3862939453125005">
+    <classShape Id="0eccff05-4a9e-467f-9b66-17204dc65797" absoluteBounds="5.5, 1.75, 2.125, 1.3862939453124996">
+      <DataClassMoniker Name="/JNVDataContext/tbl_Album" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41049adb-8d3e-4af7-a499-39df5374bc36" absoluteBounds="5.515, 2.21, 2.0949999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="552ef671-b0ef-43f0-83fb-dea4058f809e" absoluteBounds="2.375, 1.875, 2.125, 1.3862939453124996">
       <DataClassMoniker Name="/JNVDataContext/tbl_city_master" />
       <nestedChildShapes>
-        <elementListCompartment Id="86c13e90-6e17-4305-a37f-f38ff2407715" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8d9320bf-d235-4d23-ad6a-d11ab3c5442a" absoluteBounds="2.39, 2.335, 2.0949999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="919acffa-ae07-42a0-95e8-f70ff6342282" absoluteBounds="6.75, 0.75, 2, 1.3862939453125003">
+    <classShape Id="a39a0675-300a-4dc7-948c-13f23ecd4d43" absoluteBounds="9, 8.625, 2.125, 1.3862939453124987">
       <DataClassMoniker Name="/JNVDataContext/tbl_contact_us" />
       <nestedChildShapes>
-        <elementListCompartment Id="c15b89b9-5d32-4098-ab5e-03d4a313b1a5" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="28acdb91-3867-4fbd-942b-e95ec402a647" absoluteBounds="9.015, 9.085, 2.0949999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="87fa602b-3172-40fe-a2a1-8179409332cf" absoluteBounds="0.75, 6.75, 2, 1.5785953776041666">
+    <classShape Id="5ea4b9ea-1bf0-4494-997d-923bbba3e27d" absoluteBounds="11.75, 3.125, 2.5, 1.5785953776041666">
       <DataClassMoniker Name="/JNVDataContext/tbl_event" />
       <nestedChildShapes>
-        <elementListCompartment Id="99ab7581-4101-4fd6-bd3e-760c8716484a" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="dd1afad6-6bff-42a6-b7d2-a658604e24f1" absoluteBounds="11.765, 3.585, 2.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9373719b-39a4-4f47-93a0-aab9d53206ec" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+    <classShape Id="4b7564e0-72e9-465e-aa7e-d184f15ea9ad" absoluteBounds="8.5, 0.875, 2.125, 1.5785953776041666">
       <DataClassMoniker Name="/JNVDataContext/tbl_picture" />
       <nestedChildShapes>
-        <elementListCompartment Id="b88d6aa4-d7db-435b-ba97-3383fb0a29e0" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a89a1285-bc9a-4098-87b8-7eb434475e1f" absoluteBounds="8.515, 1.335, 2.0949999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="186d1e97-1e08-4202-8623-ef0371442f86" absoluteBounds="3.75, 6.75, 2, 1.7708968098958327">
+    <classShape Id="40c18bfc-b0ba-4cad-81db-34e9718070c3" absoluteBounds="12, 6.625, 2.125, 1.7708968098958327">
       <DataClassMoniker Name="/JNVDataContext/tbl_post" />
       <nestedChildShapes>
-        <elementListCompartment Id="c8e2f9ea-5b3e-4f98-a9c4-49e4cbc30a5e" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="90998d38-edd9-4b83-8a60-f43181297185" absoluteBounds="12.015, 7.085, 2.0949999999999998, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0618a603-023c-4275-817f-2f5579f9a26d" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
-      <DataClassMoniker Name="/JNVDataContext/tbl_state_master" />
-      <nestedChildShapes>
-        <elementListCompartment Id="81bd334a-de83-4dfc-aade-25b24441d283" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="5697db08-5e13-4ceb-83a5-c7244e2109c9" absoluteBounds="6.75, 8.75, 2, 2.3478011067708344">
-      <DataClassMoniker Name="/JNVDataContext/tbl_teacher" />
-      <nestedChildShapes>
-        <elementListCompartment Id="430f0983-b0ee-402c-bbc9-702a2ef2d990" absoluteBounds="6.765, 9.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="875542bc-1cc0-4bae-8220-04ee9c3db280" absoluteBounds="9.5, 5.875, 2, 7.1553369140625">
-      <DataClassMoniker Name="/JNVDataContext/tbl_user" />
-      <nestedChildShapes>
-        <elementListCompartment Id="0d8f3d33-a10b-4266-a91d-84b7d756eadc" absoluteBounds="9.515, 6.335, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="11851267-f68b-466a-8965-ba40d1609738" absoluteBounds="9.625, 3.875, 2, 1.1939925130208333">
+    <classShape Id="b27ae28a-73e5-4773-95cd-ea57044c9048" absoluteBounds="3, 9, 2.125, 1.1939925130208344">
       <DataClassMoniker Name="/JNVDataContext/tbl_Role" />
       <nestedChildShapes>
-        <elementListCompartment Id="3b8ea65e-6b5f-4321-9c40-715bbb4cfa78" absoluteBounds="9.64, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6204d50d-73f5-4ba6-ba2f-22ec7dc1f1a8" absoluteBounds="3.015, 9.46, 2.0949999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(10.5625 : 5.06899251302083); (10.5625 : 5.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <classShape Id="41b33f68-eb68-4785-a497-94178a601a9b" absoluteBounds="12, 9.625, 2.125, 1.1939925130208344">
+      <DataClassMoniker Name="/JNVDataContext/tbl_state_master" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9905784a-9085-43b9-95d5-0aaebd997b66" absoluteBounds="12.015, 10.085, 2.0949999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12a6de61-7d84-4a7f-8410-8f57b3094313" absoluteBounds="9, 11.625, 2.125, 2.3478011067708344">
+      <DataClassMoniker Name="/JNVDataContext/tbl_teacher" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f9f7b8f-d11b-4bd5-a1d1-c6b409901d16" absoluteBounds="9.015, 12.085, 2.0949999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f386ceb9-aa2f-43fb-9be5-97a3b02b2ce3" absoluteBounds="5.75, 6, 2.125, 7.1553369140624987">
+      <DataClassMoniker Name="/JNVDataContext/tbl_user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f3be3fe-b19b-4538-81aa-853244f8bc38" absoluteBounds="5.765, 6.46, 2.0949999999999998, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f07013dc-d80c-4998-a87c-a835b8131ef0" absoluteBounds="8.5, 3.25, 2.125, 1.5785953776041666">
+      <DataClassMoniker Name="/JNVDataContext/tbl_video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32ea1951-689e-4183-a984-55d41a0ee92b" absoluteBounds="8.515, 3.71, 2.0949999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 2.50564697265625); (5.5 : 2.50564697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/JNVDataContext/tbl_city_master/tbl_city_master_tbl_Album" />
+      <nodes>
+        <classShapeMoniker Id="552ef671-b0ef-43f0-83fb-dea4058f809e" />
+        <classShapeMoniker Id="0eccff05-4a9e-467f-9b66-17204dc65797" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.625 : 2.10179768880208); (8.5 : 2.10179768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/JNVDataContext/tbl_Album/tbl_Album_tbl_picture" />
+      <nodes>
+        <classShapeMoniker Id="0eccff05-4a9e-467f-9b66-17204dc65797" />
+        <classShapeMoniker Id="4b7564e0-72e9-465e-aa7e-d184f15ea9ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.125 : 9.59699625651042); (5.75 : 9.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/JNVDataContext/tbl_Role/tbl_Role_tbl_user" />
       <nodes>
-        <classShapeMoniker Id="11851267-f68b-466a-8965-ba40d1609738" />
-        <classShapeMoniker Id="875542bc-1cc0-4bae-8220-04ee9c3db280" />
+        <classShapeMoniker Id="b27ae28a-73e5-4773-95cd-ea57044c9048" />
+        <classShapeMoniker Id="f386ceb9-aa2f-43fb-9be5-97a3b02b2ce3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5625 : 3.1362939453125); (6.5625 : 4.03929768880208); (8.5 : 4.03929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/JNVDataContext/tbl_Album/tbl_Album_tbl_video" />
+      <nodes>
+        <classShapeMoniker Id="0eccff05-4a9e-467f-9b66-17204dc65797" />
+        <classShapeMoniker Id="f07013dc-d80c-4998-a87c-a835b8131ef0" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

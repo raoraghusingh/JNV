@@ -187,13 +187,17 @@
     <Compile Include="BAL\Login.cs" />
     <Compile Include="BAL\Token.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertisementController.cs" />
+    <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\BirthdayController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\FacultyController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SuperAdminController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="DAL\JNV.cs">
@@ -214,6 +218,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminHtml\AboutUs.html" />
+    <Content Include="AdminHtml\AddEvent.html" />
+    <Content Include="AdminHtml\AddFaculty.html" />
+    <Content Include="AdminHtml\Advertisement\AddAdvertisement.html" />
+    <Content Include="AdminHtml\Advertisement\ManageAdvertisement.html" />
+    <Content Include="AdminHtml\ManageEvents.html" />
     <Content Include="AdminHtml\ManageFaculty.html" />
     <Content Include="AdminHtml\Adminhome.html" />
     <Content Include="AdminHtml\AdminLogin.html" />
@@ -221,6 +231,7 @@
     <Content Include="AngularJs\Controller\AdminController.js" />
     <Content Include="AngularJs\Controller\LoginController.js" />
     <Content Include="AngularJs\Controller\SuperAdminController.js" />
+    <Content Include="AngularJs\Factory\AdminFactory.js" />
     <Content Include="AngularJs\Factory\LoginFactory.js" />
     <Content Include="AngularJs\Factory\SuperAdminFactory.js" />
     <Content Include="AngularJs\Module\JNVModule.js" />
@@ -297,6 +308,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="AdminHtml\ContactUs\ContactUs.html" />
     <Content Include="HTMLPages\gallary.html" />
     <Content Include="HTMLPages\Home.html" />
     <Content Include="HTMLPages\Index.html" />

@@ -7,14 +7,6 @@
       <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_videos" Member="tbl_videos">
-    <Type Name="tbl_video">
-      <Column Name="Video_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Video_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.tbl_advertisements" Member="tbl_advertisements">
     <Type Name="tbl_advertisement">
       <Column Name="Advertisement_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -23,11 +15,22 @@
       <Column Name="City_ID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_Album" Member="tbl_Albums">
+    <Type Name="tbl_Album">
+      <Column Name="Album_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Album_Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Album_tbl_picture" Member="tbl_pictures" ThisKey="Album_ID" OtherKey="Album_ID" Type="tbl_picture" />
+      <Association Name="tbl_Album_tbl_video" Member="tbl_videos" ThisKey="Album_ID" OtherKey="Album_ID" Type="tbl_video" />
+      <Association Name="tbl_city_master_tbl_Album" Member="tbl_city_master" ThisKey="City_ID" OtherKey="City_ID" Type="tbl_city_master" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_city_master" Member="tbl_city_masters">
     <Type Name="tbl_city_master">
       <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="City_Name" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="State_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_city_master_tbl_Album" Member="tbl_Albums" ThisKey="City_ID" OtherKey="City_ID" Type="tbl_Album" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_contact_us" Member="tbl_contact_us">
@@ -49,8 +52,9 @@
     <Type Name="tbl_picture">
       <Column Name="Picture_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Picture_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Album_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Album_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Album_tbl_picture" Member="tbl_Album" ThisKey="Album_ID" OtherKey="Album_ID" Type="tbl_Album" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_posts" Member="tbl_posts">
@@ -60,6 +64,13 @@
       <Column Name="Post_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="User_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Roles" Member="tbl_Roles">
+    <Type Name="tbl_Role">
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="tbl_Role_tbl_user" Member="tbl_users" ThisKey="RoleID" OtherKey="Role" Type="tbl_user" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_state_master" Member="tbl_state_masters">
@@ -118,11 +129,13 @@
       <Association Name="tbl_Role_tbl_user" Member="tbl_Role" ThisKey="Role" OtherKey="RoleID" Type="tbl_Role" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_Roles" Member="tbl_Roles">
-    <Type Name="tbl_Role">
-      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="RoleName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Association Name="tbl_Role_tbl_user" Member="tbl_users" ThisKey="RoleID" OtherKey="Role" Type="tbl_user" />
+  <Table Name="dbo.tbl_videos" Member="tbl_videos">
+    <Type Name="tbl_video">
+      <Column Name="Video_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Video_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Album_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Album_tbl_video" Member="tbl_Album" ThisKey="Album_ID" OtherKey="Album_ID" Type="tbl_Album" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.CheckUserValidate" Method="CheckUserValidate">
@@ -594,12 +607,6 @@
       <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Set_Picture" Method="Set_Picture">
-    <Parameter Name="Picture_Name" Parameter="picture_Name" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="Album_Name" Parameter="album_Name" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.Del_Video_By_VideoID" Method="Del_Video_By_VideoID">
     <Parameter Name="Video_ID" Parameter="video_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -626,10 +633,69 @@
       <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Set_Video" Method="Set_Video">
-    <Parameter Name="Video_Name" Parameter="video_Name" Type="System.String" DbType="NVarChar(50)" />
+  <Function Name="dbo.Get_Pictures_By_AlbumID" Method="Get_Pictures_By_AlbumID">
+    <Parameter Name="Album_ID" Parameter="album_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Pictures_By_AlbumIDResult">
+      <Column Name="Picture_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Picture_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Album_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Videos_By_AlbumID" Method="Get_Videos_By_AlbumID">
+    <Parameter Name="Album_ID" Parameter="album_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Videos_By_AlbumIDResult">
+      <Column Name="Video_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Video_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Album_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Album_By_ID" Method="Get_Album_By_ID">
+    <Parameter Name="AlbumID" Parameter="albumID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Album_By_IDResult">
+      <Column Name="Album_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Album_Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Albums_By_CityID" Method="Get_Albums_By_CityID">
+    <Parameter Name="CityID" Parameter="cityID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Albums_By_CityIDResult">
+      <Column Name="Album_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Album_Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Del_Album_By_ID" Method="Del_Album_By_ID">
+    <Parameter Name="AlbumID" Parameter="albumID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Set_Album" Method="Set_Album">
     <Parameter Name="Album_Name" Parameter="album_Name" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Set_Picture" Method="Set_Picture">
+    <Parameter Name="Picture_Name" Parameter="picture_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Album_ID" Parameter="album_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Set_Video" Method="Set_Video">
+    <Parameter Name="Video_Name" Parameter="video_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Album_ID" Parameter="album_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Get_Advertisement_By_CityID" Method="Get_Advertisement_By_CityID">
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Get_Advertisement_By_CityIDResult">
+      <Column Name="Advertisement_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Advertisement_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

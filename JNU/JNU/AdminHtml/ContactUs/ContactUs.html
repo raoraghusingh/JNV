@@ -1,0 +1,47 @@
+﻿
+<section class="content-header">
+    <h1>
+        Contact us
+        <small></small>
+    </h1>
+    <div class="pull-right btnresponsive">
+        <a href="#!/AdminDashboard/Home" class="btn btn-primary"><i class="fa fa-arrow-left"></i>Back</a>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <form role="form" id="frmContactUs" name="frmContactUs" novalidate>
+                    <div class="box-body">
+                        <div class="form-group">
+                            <div id="displayContactUs">
+                                <p>{{ vContactUs.Contact_Us }}</p>
+                                <div class="box-footer">
+                                    <a href="javascript:EditContactUS();"><i class="fa fa-pencil-square-o"></i> <span> Edit</span></a>
+                                </div>
+                            </div>
+                            <div id="editContactUs" style="display:none;">
+                                <textarea class="form-control" ng-model="vContactUs.Contact_Us" ng-class="{'submitted': submitted}" id="Contact_Us" placeholder="Contact us" required rows="10"></textarea>
+
+                                <div class="box-footer">
+                                    <button type="submit" ng-click="Submit(frmContactUs.$valid)" class="btn btn-primary">Submit</button>
+                                    <button type="submit" onclick="DisplayContactUs()" class="btn btn-primary">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" ng-model="vContactUs.Contact_Us_ID" ng-class="{'submitted': submitted}" id="Contact_Us_ID" />
+                    <input type="hidden" ng-model="vContactUs.CityID" ng-class="{'submitted': submitted}" id="CityID" value="1" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .content-header {
+        padding: 15px 15px 0 15px !important;
+    }
+</style>

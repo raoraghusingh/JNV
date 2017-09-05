@@ -17,22 +17,50 @@ namespace JNU.Controllers
 {
     public class AdvertisementController : ApiController
     {
+
+        /// <summary>
+        /// Get Advertisement By CityID
+        /// </summary>
+        /// <param name="CityID"></param>
+        /// <returns></returns>
+        public HttpResponseMessage GetAdvertisementByCityID(int CityID)
+        {
+            try
+            {
+                using (var db = new JNVDataContext())
+                {
+                    List<Get_Advertisement_By_CityIDResult> AdvertisementDetails = db.Get_Advertisement_By_CityID(CityID).ToList();
+                    return new HttpResponseMessage()
+                    {
+                        Content = new StringContent(JArray.FromObject(AdvertisementDetails).ToString(), Encoding.UTF8, "application/json")
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new HttpResponseMessage()
+                {
+                    Content = new StringContent("Something went wrong please try after some time.", Encoding.UTF8, "application/json")
+                };
+            }
+        }
+
         /// <summary>
         /// Get Advertisement details
         /// </summary>
         /// <param name="AdvertisementID"></param>
         /// <returns></returns>
         [HttpGet]
-        public HttpResponseMessage GetAdvertisementByEventID(int AdvertisementID)
+        public HttpResponseMessage GetAdvertisementByAdvertisementID(int AdvertisementID)
         {
             try
             {
                 using (var db = new JNVDataContext())
                 {
-                    List<Get_Advertisement_By_AdvertisementIDResult> ContactUSDetails = db.Get_Advertisement_By_AdvertisementID(AdvertisementID).ToList();
+                    List<Get_Advertisement_By_AdvertisementIDResult> AdvertisementDetails = db.Get_Advertisement_By_AdvertisementID(AdvertisementID).ToList();
                     return new HttpResponseMessage()
                     {
-                        Content = new StringContent(JArray.FromObject(ContactUSDetails).ToString(), Encoding.UTF8, "application/json")
+                        Content = new StringContent(JArray.FromObject(AdvertisementDetails).ToString(), Encoding.UTF8, "application/json")
                     };
                 }
             }
@@ -47,7 +75,7 @@ namespace JNU.Controllers
 
 
         /// <summary>
-        /// Delete event by event ID
+        /// Delete Advertisement by Advertisement ID
         /// </summary>
         /// <param name="AdvertisementID"></param>
         /// <returns></returns>
@@ -59,18 +87,18 @@ namespace JNU.Controllers
                 db.Del_Advertisement_By_AdvertisementID(AdvertisementID);
                 return new HttpResponseMessage()
                 {
-                    Content = new StringContent("User Delete Successfully", Encoding.UTF8, "application/json")
+                    Content = new StringContent("Advertisement Delete Successfully", Encoding.UTF8, "application/json")
                 };
 
             }
         }
 
         /// <summary>
-        /// Add update Event
+        /// Add update Advertisement
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage Event()
+        public HttpResponseMessage Advertisement()
         {
             try
             {
@@ -108,5 +136,7 @@ namespace JNU.Controllers
                 };
             }
         }
+
+
     }
 }

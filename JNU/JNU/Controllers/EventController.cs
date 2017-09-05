@@ -17,6 +17,33 @@ namespace JNU.Controllers
 {
     public class EventController : ApiController
     {
+        /// <summary>
+        /// Get all events by City ID
+        /// </summary>
+        /// <param name="CityID">City ID</param>
+        /// <returns></returns>
+        [HttpGet]
+        public HttpResponseMessage GetEventsByCityID(int CityID)
+        {
+            try
+            {
+                using (var db = new JNVDataContext())
+                {
+                    List<Get_Events_By_CityIDResult> lstEvents = db.Get_Events_By_CityID(CityID).ToList();
+                    return new HttpResponseMessage()
+                    {
+                        Content = new StringContent(JArray.FromObject(lstEvents).ToString(), Encoding.UTF8, "application/json")
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new HttpResponseMessage()
+                {
+                    Content = new StringContent("Something went wrong please try after some time.", Encoding.UTF8, "application/json")
+                };
+            }
+        }
 
         /// <summary>
         /// Get Event details
@@ -24,16 +51,16 @@ namespace JNU.Controllers
         /// <param name="EventID"></param>
         /// <returns></returns>
         [HttpGet]
-        public HttpResponseMessage GetEventByEventID(int EventID)
+        public HttpResponseMessage GetEventByID(int EventID)
         {
             try
             {
                 using (var db = new JNVDataContext())
                 {
-                    List<Get_event_By_eventIDResult> ContactUSDetails = db.Get_event_By_eventID(EventID).ToList();
+                    List<Get_event_By_eventIDResult> lstEvents = db.Get_event_By_eventID(EventID).ToList();
                     return new HttpResponseMessage()
                     {
-                        Content = new StringContent(JArray.FromObject(ContactUSDetails).ToString(), Encoding.UTF8, "application/json")
+                        Content = new StringContent(JArray.FromObject(lstEvents).ToString(), Encoding.UTF8, "application/json")
                     };
                 }
             }
@@ -71,7 +98,7 @@ namespace JNU.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage Event()
+        public HttpResponseMessage AddUpdateEvent()
         {
             try
             {
@@ -79,8 +106,8 @@ namespace JNU.Controllers
                 objEventDetails.Event_ID = Convert.ToInt32(HttpContext.Current.Request.Form["Event_ID"]);
                 objEventDetails.Event_Name = Convert.ToString(HttpContext.Current.Request.Form["Event_Name"]);
                 objEventDetails.Event_Date = Convert.ToDateTime(HttpContext.Current.Request.Form["Event_Date"]);
-                objEventDetails.City_ID = Convert.ToInt32(HttpContext.Current.Request.Form["CityID"]);
-                
+                objEventDetails.City_ID = Convert.ToInt32(HttpContext.Current.Request.Form["City_ID"]);
+
 
                 using (var db = new JNVDataContext())
                 {

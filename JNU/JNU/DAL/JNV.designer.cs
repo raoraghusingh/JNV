@@ -33,12 +33,12 @@ namespace JNU.DAL
     partial void Inserttbl_about_us(tbl_about_us instance);
     partial void Updatetbl_about_us(tbl_about_us instance);
     partial void Deletetbl_about_us(tbl_about_us instance);
-    partial void Inserttbl_video(tbl_video instance);
-    partial void Updatetbl_video(tbl_video instance);
-    partial void Deletetbl_video(tbl_video instance);
     partial void Inserttbl_advertisement(tbl_advertisement instance);
     partial void Updatetbl_advertisement(tbl_advertisement instance);
     partial void Deletetbl_advertisement(tbl_advertisement instance);
+    partial void Inserttbl_Album(tbl_Album instance);
+    partial void Updatetbl_Album(tbl_Album instance);
+    partial void Deletetbl_Album(tbl_Album instance);
     partial void Inserttbl_city_master(tbl_city_master instance);
     partial void Updatetbl_city_master(tbl_city_master instance);
     partial void Deletetbl_city_master(tbl_city_master instance);
@@ -54,15 +54,18 @@ namespace JNU.DAL
     partial void Inserttbl_post(tbl_post instance);
     partial void Updatetbl_post(tbl_post instance);
     partial void Deletetbl_post(tbl_post instance);
+    partial void Inserttbl_Role(tbl_Role instance);
+    partial void Updatetbl_Role(tbl_Role instance);
+    partial void Deletetbl_Role(tbl_Role instance);
     partial void Inserttbl_state_master(tbl_state_master instance);
     partial void Updatetbl_state_master(tbl_state_master instance);
     partial void Deletetbl_state_master(tbl_state_master instance);
     partial void Inserttbl_teacher(tbl_teacher instance);
     partial void Updatetbl_teacher(tbl_teacher instance);
     partial void Deletetbl_teacher(tbl_teacher instance);
-    partial void Inserttbl_Role(tbl_Role instance);
-    partial void Updatetbl_Role(tbl_Role instance);
-    partial void Deletetbl_Role(tbl_Role instance);
+    partial void Inserttbl_video(tbl_video instance);
+    partial void Updatetbl_video(tbl_video instance);
+    partial void Deletetbl_video(tbl_video instance);
     #endregion
 		
 		public JNVDataContext() : 
@@ -103,19 +106,19 @@ namespace JNU.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_video> tbl_videos
-		{
-			get
-			{
-				return this.GetTable<tbl_video>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tbl_advertisement> tbl_advertisements
 		{
 			get
 			{
 				return this.GetTable<tbl_advertisement>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_Album> tbl_Albums
+		{
+			get
+			{
+				return this.GetTable<tbl_Album>();
 			}
 		}
 		
@@ -159,6 +162,14 @@ namespace JNU.DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<tbl_Role> tbl_Roles
+		{
+			get
+			{
+				return this.GetTable<tbl_Role>();
+			}
+		}
+		
 		public System.Data.Linq.Table<tbl_state_master> tbl_state_masters
 		{
 			get
@@ -183,11 +194,11 @@ namespace JNU.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_Role> tbl_Roles
+		public System.Data.Linq.Table<tbl_video> tbl_videos
 		{
 			get
 			{
-				return this.GetTable<tbl_Role>();
+				return this.GetTable<tbl_video>();
 			}
 		}
 		
@@ -546,13 +557,6 @@ namespace JNU.DAL
 			return ((ISingleResult<Get_Pictures_By_CityIDResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Picture")]
-		public int Set_Picture([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Picture_Name", DbType="NVarChar(50)")] string picture_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="NVarChar(50)")] string album_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), picture_Name, album_Name, city_ID);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Del_Video_By_VideoID")]
 		public int Del_Video_By_VideoID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Video_ID", DbType="Int")] System.Nullable<int> video_ID)
 		{
@@ -581,11 +585,67 @@ namespace JNU.DAL
 			return ((ISingleResult<Get_Videos_By_CityIDResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Video")]
-		public int Set_Video([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Video_Name", DbType="NVarChar(50)")] string video_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="NVarChar(50)")] string album_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Pictures_By_AlbumID")]
+		public ISingleResult<Get_Pictures_By_AlbumIDResult> Get_Pictures_By_AlbumID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_ID", DbType="Int")] System.Nullable<int> album_ID)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), video_Name, album_Name, city_ID);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), album_ID);
+			return ((ISingleResult<Get_Pictures_By_AlbumIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Videos_By_AlbumID")]
+		public ISingleResult<Get_Videos_By_AlbumIDResult> Get_Videos_By_AlbumID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_ID", DbType="Int")] System.Nullable<int> album_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), album_ID);
+			return ((ISingleResult<Get_Videos_By_AlbumIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Album_By_ID")]
+		public ISingleResult<Get_Album_By_IDResult> Get_Album_By_ID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="AlbumID", DbType="Int")] System.Nullable<int> albumID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), albumID);
+			return ((ISingleResult<Get_Album_By_IDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Albums_By_CityID")]
+		public ISingleResult<Get_Albums_By_CityIDResult> Get_Albums_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CityID", DbType="Int")] System.Nullable<int> cityID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cityID);
+			return ((ISingleResult<Get_Albums_By_CityIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Del_Album_By_ID")]
+		public int Del_Album_By_ID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="AlbumID", DbType="Int")] System.Nullable<int> albumID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), albumID);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Album")]
+		public int Set_Album([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_Name", DbType="NVarChar(50)")] string album_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), album_Name, city_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Picture")]
+		public int Set_Picture([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Picture_Name", DbType="NVarChar(50)")] string picture_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_ID", DbType="Int")] System.Nullable<int> album_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), picture_Name, album_ID, city_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Set_Video")]
+		public int Set_Video([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Video_Name", DbType="NVarChar(50)")] string video_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Album_ID", DbType="Int")] System.Nullable<int> album_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), video_Name, album_ID, city_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Get_Advertisement_By_CityID")]
+		public ISingleResult<Get_Advertisement_By_CityIDResult> Get_Advertisement_By_CityID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city_ID);
+			return ((ISingleResult<Get_Advertisement_By_CityIDResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -654,140 +714,6 @@ namespace JNU.DAL
 					this._About_Us = value;
 					this.SendPropertyChanged("About_Us");
 					this.OnAbout_UsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
-		public System.Nullable<int> City_ID
-		{
-			get
-			{
-				return this._City_ID;
-			}
-			set
-			{
-				if ((this._City_ID != value))
-				{
-					this.OnCity_IDChanging(value);
-					this.SendPropertyChanging();
-					this._City_ID = value;
-					this.SendPropertyChanged("City_ID");
-					this.OnCity_IDChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_videos")]
-	public partial class tbl_video : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Video_ID;
-		
-		private string _Video_Name;
-		
-		private string _Album_Name;
-		
-		private System.Nullable<int> _City_ID;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnVideo_IDChanging(int value);
-    partial void OnVideo_IDChanged();
-    partial void OnVideo_NameChanging(string value);
-    partial void OnVideo_NameChanged();
-    partial void OnAlbum_NameChanging(string value);
-    partial void OnAlbum_NameChanged();
-    partial void OnCity_IDChanging(System.Nullable<int> value);
-    partial void OnCity_IDChanged();
-    #endregion
-		
-		public tbl_video()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Video_ID
-		{
-			get
-			{
-				return this._Video_ID;
-			}
-			set
-			{
-				if ((this._Video_ID != value))
-				{
-					this.OnVideo_IDChanging(value);
-					this.SendPropertyChanging();
-					this._Video_ID = value;
-					this.SendPropertyChanged("Video_ID");
-					this.OnVideo_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_Name", DbType="NVarChar(50)")]
-		public string Video_Name
-		{
-			get
-			{
-				return this._Video_Name;
-			}
-			set
-			{
-				if ((this._Video_Name != value))
-				{
-					this.OnVideo_NameChanging(value);
-					this.SendPropertyChanging();
-					this._Video_Name = value;
-					this.SendPropertyChanged("Video_Name");
-					this.OnVideo_NameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
-		public string Album_Name
-		{
-			get
-			{
-				return this._Album_Name;
-			}
-			set
-			{
-				if ((this._Album_Name != value))
-				{
-					this.OnAlbum_NameChanging(value);
-					this.SendPropertyChanging();
-					this._Album_Name = value;
-					this.SendPropertyChanged("Album_Name");
-					this.OnAlbum_NameChanged();
 				}
 			}
 		}
@@ -967,6 +893,213 @@ namespace JNU.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Album")]
+	public partial class tbl_Album : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Album_ID;
+		
+		private string _Album_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		private EntitySet<tbl_picture> _tbl_pictures;
+		
+		private EntitySet<tbl_video> _tbl_videos;
+		
+		private EntityRef<tbl_city_master> _tbl_city_master;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAlbum_IDChanging(int value);
+    partial void OnAlbum_IDChanged();
+    partial void OnAlbum_NameChanging(string value);
+    partial void OnAlbum_NameChanged();
+    partial void OnCity_IDChanging(System.Nullable<int> value);
+    partial void OnCity_IDChanged();
+    #endregion
+		
+		public tbl_Album()
+		{
+			this._tbl_pictures = new EntitySet<tbl_picture>(new Action<tbl_picture>(this.attach_tbl_pictures), new Action<tbl_picture>(this.detach_tbl_pictures));
+			this._tbl_videos = new EntitySet<tbl_video>(new Action<tbl_video>(this.attach_tbl_videos), new Action<tbl_video>(this.detach_tbl_videos));
+			this._tbl_city_master = default(EntityRef<tbl_city_master>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Album_ID
+		{
+			get
+			{
+				return this._Album_ID;
+			}
+			set
+			{
+				if ((this._Album_ID != value))
+				{
+					this.OnAlbum_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Album_ID = value;
+					this.SendPropertyChanged("Album_ID");
+					this.OnAlbum_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NChar(50) NOT NULL", CanBeNull=false)]
+		public string Album_Name
+		{
+			get
+			{
+				return this._Album_Name;
+			}
+			set
+			{
+				if ((this._Album_Name != value))
+				{
+					this.OnAlbum_NameChanging(value);
+					this.SendPropertyChanging();
+					this._Album_Name = value;
+					this.SendPropertyChanged("Album_Name");
+					this.OnAlbum_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					if (this._tbl_city_master.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCity_IDChanging(value);
+					this.SendPropertyChanging();
+					this._City_ID = value;
+					this.SendPropertyChanged("City_ID");
+					this.OnCity_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_Album_tbl_picture", Storage="_tbl_pictures", ThisKey="Album_ID", OtherKey="Album_ID")]
+		public EntitySet<tbl_picture> tbl_pictures
+		{
+			get
+			{
+				return this._tbl_pictures;
+			}
+			set
+			{
+				this._tbl_pictures.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_Album_tbl_video", Storage="_tbl_videos", ThisKey="Album_ID", OtherKey="Album_ID")]
+		public EntitySet<tbl_video> tbl_videos
+		{
+			get
+			{
+				return this._tbl_videos;
+			}
+			set
+			{
+				this._tbl_videos.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_city_master_tbl_Album", Storage="_tbl_city_master", ThisKey="City_ID", OtherKey="City_ID", IsForeignKey=true)]
+		public tbl_city_master tbl_city_master
+		{
+			get
+			{
+				return this._tbl_city_master.Entity;
+			}
+			set
+			{
+				tbl_city_master previousValue = this._tbl_city_master.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_city_master.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_city_master.Entity = null;
+						previousValue.tbl_Albums.Remove(this);
+					}
+					this._tbl_city_master.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_Albums.Add(this);
+						this._City_ID = value.City_ID;
+					}
+					else
+					{
+						this._City_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("tbl_city_master");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tbl_pictures(tbl_picture entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_Album = this;
+		}
+		
+		private void detach_tbl_pictures(tbl_picture entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_Album = null;
+		}
+		
+		private void attach_tbl_videos(tbl_video entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_Album = this;
+		}
+		
+		private void detach_tbl_videos(tbl_video entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_Album = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_city_master")]
 	public partial class tbl_city_master : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -978,6 +1111,8 @@ namespace JNU.DAL
 		private string _City_Name;
 		
 		private System.Nullable<int> _State_ID;
+		
+		private EntitySet<tbl_Album> _tbl_Albums;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -993,6 +1128,7 @@ namespace JNU.DAL
 		
 		public tbl_city_master()
 		{
+			this._tbl_Albums = new EntitySet<tbl_Album>(new Action<tbl_Album>(this.attach_tbl_Albums), new Action<tbl_Album>(this.detach_tbl_Albums));
 			OnCreated();
 		}
 		
@@ -1056,6 +1192,19 @@ namespace JNU.DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_city_master_tbl_Album", Storage="_tbl_Albums", ThisKey="City_ID", OtherKey="City_ID")]
+		public EntitySet<tbl_Album> tbl_Albums
+		{
+			get
+			{
+				return this._tbl_Albums;
+			}
+			set
+			{
+				this._tbl_Albums.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1074,6 +1223,18 @@ namespace JNU.DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_tbl_Albums(tbl_Album entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_city_master = this;
+		}
+		
+		private void detach_tbl_Albums(tbl_Album entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_city_master = null;
 		}
 	}
 	
@@ -1331,9 +1492,11 @@ namespace JNU.DAL
 		
 		private string _Picture_Name;
 		
-		private string _Album_Name;
-		
 		private System.Nullable<int> _City_ID;
+		
+		private System.Nullable<int> _Album_ID;
+		
+		private EntityRef<tbl_Album> _tbl_Album;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1343,14 +1506,15 @@ namespace JNU.DAL
     partial void OnPicture_IDChanged();
     partial void OnPicture_NameChanging(string value);
     partial void OnPicture_NameChanged();
-    partial void OnAlbum_NameChanging(string value);
-    partial void OnAlbum_NameChanged();
     partial void OnCity_IDChanging(System.Nullable<int> value);
     partial void OnCity_IDChanged();
+    partial void OnAlbum_IDChanging(System.Nullable<int> value);
+    partial void OnAlbum_IDChanged();
     #endregion
 		
 		public tbl_picture()
 		{
+			this._tbl_Album = default(EntityRef<tbl_Album>);
 			OnCreated();
 		}
 		
@@ -1394,26 +1558,6 @@ namespace JNU.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NVarChar(50)")]
-		public string Album_Name
-		{
-			get
-			{
-				return this._Album_Name;
-			}
-			set
-			{
-				if ((this._Album_Name != value))
-				{
-					this.OnAlbum_NameChanging(value);
-					this.SendPropertyChanging();
-					this._Album_Name = value;
-					this.SendPropertyChanged("Album_Name");
-					this.OnAlbum_NameChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
 		public System.Nullable<int> City_ID
 		{
@@ -1430,6 +1574,64 @@ namespace JNU.DAL
 					this._City_ID = value;
 					this.SendPropertyChanged("City_ID");
 					this.OnCity_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_ID", DbType="Int")]
+		public System.Nullable<int> Album_ID
+		{
+			get
+			{
+				return this._Album_ID;
+			}
+			set
+			{
+				if ((this._Album_ID != value))
+				{
+					if (this._tbl_Album.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnAlbum_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Album_ID = value;
+					this.SendPropertyChanged("Album_ID");
+					this.OnAlbum_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_Album_tbl_picture", Storage="_tbl_Album", ThisKey="Album_ID", OtherKey="Album_ID", IsForeignKey=true)]
+		public tbl_Album tbl_Album
+		{
+			get
+			{
+				return this._tbl_Album.Entity;
+			}
+			set
+			{
+				tbl_Album previousValue = this._tbl_Album.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_Album.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_Album.Entity = null;
+						previousValue.tbl_pictures.Remove(this);
+					}
+					this._tbl_Album.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_pictures.Add(this);
+						this._Album_ID = value.Album_ID;
+					}
+					else
+					{
+						this._Album_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("tbl_Album");
 				}
 			}
 		}
@@ -1588,6 +1790,92 @@ namespace JNU.DAL
 					this._City_ID = value;
 					this.SendPropertyChanged("City_ID");
 					this.OnCity_IDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Roles")]
+	public partial class tbl_Role : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _RoleID;
+		
+		private string _RoleName;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRoleIDChanging(int value);
+    partial void OnRoleIDChanged();
+    partial void OnRoleNameChanging(string value);
+    partial void OnRoleNameChanged();
+    #endregion
+		
+		public tbl_Role()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int RoleID
+		{
+			get
+			{
+				return this._RoleID;
+			}
+			set
+			{
+				if ((this._RoleID != value))
+				{
+					this.OnRoleIDChanging(value);
+					this.SendPropertyChanging();
+					this._RoleID = value;
+					this.SendPropertyChanged("RoleID");
+					this.OnRoleIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="VarChar(250)")]
+		public string RoleName
+		{
+			get
+			{
+				return this._RoleName;
+			}
+			set
+			{
+				if ((this._RoleName != value))
+				{
+					this.OnRoleNameChanging(value);
+					this.SendPropertyChanging();
+					this._RoleName = value;
+					this.SendPropertyChanged("RoleName");
+					this.OnRoleNameChanged();
 				}
 			}
 		}
@@ -2532,67 +2820,156 @@ namespace JNU.DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Roles")]
-	public partial class tbl_Role : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_videos")]
+	public partial class tbl_video : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _RoleID;
+		private int _Video_ID;
 		
-		private string _RoleName;
+		private string _Video_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		private System.Nullable<int> _Album_ID;
+		
+		private EntityRef<tbl_Album> _tbl_Album;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnRoleIDChanging(int value);
-    partial void OnRoleIDChanged();
-    partial void OnRoleNameChanging(string value);
-    partial void OnRoleNameChanged();
+    partial void OnVideo_IDChanging(int value);
+    partial void OnVideo_IDChanged();
+    partial void OnVideo_NameChanging(string value);
+    partial void OnVideo_NameChanged();
+    partial void OnCity_IDChanging(System.Nullable<int> value);
+    partial void OnCity_IDChanged();
+    partial void OnAlbum_IDChanging(System.Nullable<int> value);
+    partial void OnAlbum_IDChanged();
     #endregion
 		
-		public tbl_Role()
+		public tbl_video()
 		{
+			this._tbl_Album = default(EntityRef<tbl_Album>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int RoleID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Video_ID
 		{
 			get
 			{
-				return this._RoleID;
+				return this._Video_ID;
 			}
 			set
 			{
-				if ((this._RoleID != value))
+				if ((this._Video_ID != value))
 				{
-					this.OnRoleIDChanging(value);
+					this.OnVideo_IDChanging(value);
 					this.SendPropertyChanging();
-					this._RoleID = value;
-					this.SendPropertyChanged("RoleID");
-					this.OnRoleIDChanged();
+					this._Video_ID = value;
+					this.SendPropertyChanged("Video_ID");
+					this.OnVideo_IDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="VarChar(250)")]
-		public string RoleName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_Name", DbType="NVarChar(50)")]
+		public string Video_Name
 		{
 			get
 			{
-				return this._RoleName;
+				return this._Video_Name;
 			}
 			set
 			{
-				if ((this._RoleName != value))
+				if ((this._Video_Name != value))
 				{
-					this.OnRoleNameChanging(value);
+					this.OnVideo_NameChanging(value);
 					this.SendPropertyChanging();
-					this._RoleName = value;
-					this.SendPropertyChanged("RoleName");
-					this.OnRoleNameChanged();
+					this._Video_Name = value;
+					this.SendPropertyChanged("Video_Name");
+					this.OnVideo_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this.OnCity_IDChanging(value);
+					this.SendPropertyChanging();
+					this._City_ID = value;
+					this.SendPropertyChanged("City_ID");
+					this.OnCity_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_ID", DbType="Int")]
+		public System.Nullable<int> Album_ID
+		{
+			get
+			{
+				return this._Album_ID;
+			}
+			set
+			{
+				if ((this._Album_ID != value))
+				{
+					if (this._tbl_Album.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnAlbum_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Album_ID = value;
+					this.SendPropertyChanged("Album_ID");
+					this.OnAlbum_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_Album_tbl_video", Storage="_tbl_Album", ThisKey="Album_ID", OtherKey="Album_ID", IsForeignKey=true)]
+		public tbl_Album tbl_Album
+		{
+			get
+			{
+				return this._tbl_Album.Entity;
+			}
+			set
+			{
+				tbl_Album previousValue = this._tbl_Album.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_Album.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_Album.Entity = null;
+						previousValue.tbl_videos.Remove(this);
+					}
+					this._tbl_Album.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_videos.Add(this);
+						this._Album_ID = value.Album_ID;
+					}
+					else
+					{
+						this._Album_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("tbl_Album");
 				}
 			}
 		}
@@ -6141,6 +6518,388 @@ namespace JNU.DAL
 				if ((this._City_ID != value))
 				{
 					this._City_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Pictures_By_AlbumIDResult
+	{
+		
+		private int _Picture_ID;
+		
+		private string _Picture_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		private System.Nullable<int> _Album_ID;
+		
+		public Get_Pictures_By_AlbumIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_ID", DbType="Int NOT NULL")]
+		public int Picture_ID
+		{
+			get
+			{
+				return this._Picture_ID;
+			}
+			set
+			{
+				if ((this._Picture_ID != value))
+				{
+					this._Picture_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture_Name", DbType="NVarChar(50)")]
+		public string Picture_Name
+		{
+			get
+			{
+				return this._Picture_Name;
+			}
+			set
+			{
+				if ((this._Picture_Name != value))
+				{
+					this._Picture_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_ID", DbType="Int")]
+		public System.Nullable<int> Album_ID
+		{
+			get
+			{
+				return this._Album_ID;
+			}
+			set
+			{
+				if ((this._Album_ID != value))
+				{
+					this._Album_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Videos_By_AlbumIDResult
+	{
+		
+		private int _Video_ID;
+		
+		private string _Video_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		private System.Nullable<int> _Album_ID;
+		
+		public Get_Videos_By_AlbumIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_ID", DbType="Int NOT NULL")]
+		public int Video_ID
+		{
+			get
+			{
+				return this._Video_ID;
+			}
+			set
+			{
+				if ((this._Video_ID != value))
+				{
+					this._Video_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Video_Name", DbType="NVarChar(50)")]
+		public string Video_Name
+		{
+			get
+			{
+				return this._Video_Name;
+			}
+			set
+			{
+				if ((this._Video_Name != value))
+				{
+					this._Video_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_ID", DbType="Int")]
+		public System.Nullable<int> Album_ID
+		{
+			get
+			{
+				return this._Album_ID;
+			}
+			set
+			{
+				if ((this._Album_ID != value))
+				{
+					this._Album_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Album_By_IDResult
+	{
+		
+		private int _Album_ID;
+		
+		private string _Album_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		public Get_Album_By_IDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_ID", DbType="Int NOT NULL")]
+		public int Album_ID
+		{
+			get
+			{
+				return this._Album_ID;
+			}
+			set
+			{
+				if ((this._Album_ID != value))
+				{
+					this._Album_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NChar(50) NOT NULL", CanBeNull=false)]
+		public string Album_Name
+		{
+			get
+			{
+				return this._Album_Name;
+			}
+			set
+			{
+				if ((this._Album_Name != value))
+				{
+					this._Album_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Albums_By_CityIDResult
+	{
+		
+		private int _Album_ID;
+		
+		private string _Album_Name;
+		
+		private System.Nullable<int> _City_ID;
+		
+		public Get_Albums_By_CityIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_ID", DbType="Int NOT NULL")]
+		public int Album_ID
+		{
+			get
+			{
+				return this._Album_ID;
+			}
+			set
+			{
+				if ((this._Album_ID != value))
+				{
+					this._Album_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Album_Name", DbType="NChar(50) NOT NULL", CanBeNull=false)]
+		public string Album_Name
+		{
+			get
+			{
+				return this._Album_Name;
+			}
+			set
+			{
+				if ((this._Album_Name != value))
+				{
+					this._Album_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int")]
+		public System.Nullable<int> City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Get_Advertisement_By_CityIDResult
+	{
+		
+		private int _Advertisement_ID;
+		
+		private string _Advertisement_Name;
+		
+		private string _Position;
+		
+		private string _City_ID;
+		
+		private string _URL;
+		
+		public Get_Advertisement_By_CityIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Advertisement_ID", DbType="Int NOT NULL")]
+		public int Advertisement_ID
+		{
+			get
+			{
+				return this._Advertisement_ID;
+			}
+			set
+			{
+				if ((this._Advertisement_ID != value))
+				{
+					this._Advertisement_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Advertisement_Name", DbType="NVarChar(50)")]
+		public string Advertisement_Name
+		{
+			get
+			{
+				return this._Advertisement_Name;
+			}
+			set
+			{
+				if ((this._Advertisement_Name != value))
+				{
+					this._Advertisement_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Position", DbType="NVarChar(10)")]
+		public string Position
+		{
+			get
+			{
+				return this._Position;
+			}
+			set
+			{
+				if ((this._Position != value))
+				{
+					this._Position = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="NVarChar(30)")]
+		public string City_ID
+		{
+			get
+			{
+				return this._City_ID;
+			}
+			set
+			{
+				if ((this._City_ID != value))
+				{
+					this._City_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(MAX)")]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this._URL = value;
 				}
 			}
 		}

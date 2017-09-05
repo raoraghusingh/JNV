@@ -1,0 +1,47 @@
+﻿
+<section class="content-header">
+    <h1>
+        About us
+        <small></small>
+    </h1>
+    <div class="pull-right btnresponsive">
+        <a href="#!/AdminDashboard/Home" class="btn btn-primary"><i class="fa fa-arrow-left"></i>Back</a>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <form role="form" id="frmAboutUs" name="frmAboutUs" novalidate>
+                    <div class="box-body">
+                        <div class="form-group">
+                            <div id="displayAbooutUs">
+                                <p>{{ vAboutUs.AboutUs }}</p>
+                                <div class="box-footer">
+                                    <a href="javascript:EditAboutUS();"><i class="fa fa-pencil-square-o"></i> <span> Edit</span></a>
+                                </div>
+                            </div>
+                            <div id="editAbooutUs" style="display:none;">
+                                <textarea class="form-control" ng-model="vAboutUs.AboutUs" ng-class="{'submitted': submitted}" id="AboutUs" placeholder="About us" required rows="10"></textarea>
+
+                                <div class="box-footer">
+                                    <button type="submit" ng-click="Submit(frmAboutUs.$valid)" class="btn btn-primary">Submit</button>
+                                    <button type="submit" onclick="DisplayAboutUs()" class="btn btn-primary">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" ng-model="vAboutUs.AboutUsID" ng-class="{'submitted': submitted}" id="AboutUsID" />
+                    <input type="hidden" ng-model="vAboutUs.CityID" ng-class="{'submitted': submitted}" id="CityID" value="1" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .content-header {
+        padding: 15px 15px 0 15px !important;
+    }
+</style>

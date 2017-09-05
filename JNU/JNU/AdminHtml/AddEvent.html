@@ -1,0 +1,60 @@
+﻿
+<section class="content-header">
+    <h1>
+        Manage Events
+        <small></small>
+    </h1>
+    <div class="pull-right btnresponsive">
+        <a href="#!/AdminDashboard/ManageEvents" class="btn btn-primary"><i class="fa fa-arrow-left"></i>Back</a>
+    </div>
+</section>
+
+
+<section class="content">
+    <div class="row">        
+        <div class="col-md-12">            
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Add Event</h3>
+                </div>
+               
+                <form role="form" id="addEventForm" name="addEventForm" novalidate>
+                    <div class="box-body">
+                        <div class="form-group">
+                            <input type="hidden" ng-model="event.Event_ID" />
+                            <input type="text" class="form-control" ng-model="event.Event_Name" ng-class="{'submitted': submitted}" id="Event_Name" placeholder="Enter Name" required>
+                        </div>        
+                                        
+                        <div class="form-group">
+                            <input type="date" class="form-control" ng-model="event.Event_Date" ng-class="{'submitted': submitted}" id="Event_Date" required>
+                            
+                        </div>                       
+
+                        <div class="form-group">                            
+                            <select class="form-control" ng-model="event.City_ID" ng-options="s.name for s in event.CityList" id="City_ID"></select>
+                        </div>                   
+                       
+                    </div>                  
+
+                    <div class="box-footer">
+                        <button type="submit" ng-click="Submit(addEventForm.$valid)" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .content-header {
+        padding: 15px 15px 0 15px !important;
+    }
+
+    input.submitted.ng-invalid, textarea.submitted.ng-invalid {
+        border: 2px solid red !important;
+    }
+
+    input.submitted.ng-valid, textarea.submitted.ng-valid {
+        border: 2px solid green !important;
+    }
+</style>
+
